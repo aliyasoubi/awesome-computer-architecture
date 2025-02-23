@@ -5,9 +5,9 @@ The open-source "Awesome Computer Architecture" repository has been enhanced by 
 
 ## Table of Contents
 - [Introduction](#introduction)
-- [Simulators](#simulators)
+- [Simulators](#cpu-simulators)
 - [Benchmarks](#benchmarks)
-- [Tools](#tools)
+- [Tools](#tools-for-computer-architecture-research)
 - [Tutorials](#tutorials)
 - [How to Contribute](#how-to-contribute)
 - [License](#license)
@@ -16,7 +16,7 @@ The open-source "Awesome Computer Architecture" repository has been enhanced by 
 
 This repository provides a comprehensive list of resources related to computer architecture. It is intended for researchers and graduate students looking for simulators, benchmarks, tools, and tutorials in the field.
 
-## CPU/SoC Simulators  
+## CPU Simulators
 | Simulator       | Description                                  | Use Case                          | Link |  
 |-----------------|----------------------------------------------|-----------------------------------|------|  
 | **gem5**        | Modular, open-source CPU/SoC simulator.      | Cache, branch prediction, OoO CPUs. | [gem5.org](https://www.gem5.org/) |  
@@ -123,9 +123,9 @@ This section provides links to online courses and specific guides for learning c
 | Tutorial                            | Description                                                          | Link |
 |-------------------------------------|----------------------------------------------------------------------|------|
 | **Princeton Computer Architecture** | Comprehensive course on computer architecture for researchers and graduate students | [Princeton Computer Architecture](https://www.coursera.org/learn/comparch) |
-| **Georgia Tech High Performance**   | Advanced course on high-performance computer architecture for researchers | [Georgia Tech High Performance](https://www.udacity.com/course/high-performance-computer-architecture--ud007) |
-| **gem5 Tutorials**                  | Official tutorials for hands-on learning with the gem5 simulator    | [gem5 Tutorials](https://www.gem5.org/learning_gem5) |
-| **RISC-V Tutorials**                | Official learning resources for RISC-V architecture                 | [RISC-V Tutorials](https://riscv.org/learning) |
+| **Georgia Tech High Performance**   | Advanced course on high-performance computer architecture for researchers | [Georgia Tech High Performance](https://www.youtube.com/playlist?list=PLAwxTw4SYaPmqpjgrmf4-DGlaeV0om4iP) |
+| **gem5 Tutorials**                  | Official tutorials for hands-on learning with the gem5 simulator    | [gem5 Tutorials](https://www.gem5.org/documentation/learning_gem5/introduction/) |
+| **RISC-V Tutorials**                | Official learning resources for RISC-V architecture                 | [RISC-V Tutorials](https://github.com/riscv/learn) |
 | **GPU Architecture Tutorial**       | Detailed explanation of GPU architecture for computer architecture students | [GPU Architecture Tutorial](https://medium.com/codex/understanding-the-architecture-of-a-gpu-d5d2d2e8978b) |
 
 
