@@ -1,9 +1,9 @@
-# [Awesome Computer Architecture](https://github.com/aliyasoubi/awesome-computer-architecture) 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Awesome Computer Architecture [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-A curated list of awesome computer architecture resources, including simulators, benchmarks, tools, and tutorials. This repository serves as a robust resource for researchers, graduate students, and hardware engineering enthusiasts.
+Computer architecture resources, including simulators, benchmarks, tools, and tutorials for researchers, graduate students, and hardware engineers.
 
-## Table of Contents
+## Contents
+
 - [Books](#books)
 - [Conferences](#conferences)
 - [Simulators](#simulators)
@@ -15,6 +15,10 @@ A curated list of awesome computer architecture resources, including simulators,
   - [Specialized/Historical Tools](#specializedhistorical-tools)
 - [Benchmarks](#benchmarks)
 - [Tools for Research](#tools-for-research)
+  - [Performance Analysis](#performance-analysis)
+  - [Power & Energy](#power--energy)
+  - [Design Language](#design-language)
+  - [Visualization](#visualization)
 - [ISA References & Specs](#isa-references--specs)
 - [Compilers & Binary Analysis](#compilers--binary-analysis)
 - [Traces & Datasets](#traces--datasets)
@@ -26,9 +30,6 @@ A curated list of awesome computer architecture resources, including simulators,
   - [Hardware Security & Confidential Computing](#hardware-security--confidential-computing)
 - [Elite Research Labs in Computer Architecture & Systems](#elite-research-labs-in-computer-architecture--systems)
 - [Hall of Fame](#hall-of-fame)
-- [How to Contribute](#how-to-contribute)
-- [License](#license)
-
 
 ---
 
@@ -36,267 +37,207 @@ A curated list of awesome computer architecture resources, including simulators,
 
 Essential reading materials for computer architecture, ranging from foundational concepts to advanced quantitative analysis.
 
-| Book | Author(s) | Focus | Link |
-|------|-----------|-------|------|
-| **Computer Architecture: A Quantitative Approach** | Hennessy & Patterson | The definitive guide for graduate-level architecture. | [Link](https://store.elsevier.com/eu/book/9780128119051/computer-architecture) |
-| **Computer Organization and Design (RISC-V Edition)** | Patterson & Hennessy | Best for undergraduate basics and RISC-V fundamentals. | [Link](https://store.elsevier.com/eu/book/9780128203316/computer-organization-and-design-risc-v-edition) |
-| **Digital Design and Computer Architecture** | Harris & Harris | Connecting logic gates to processor design. | [Link](https://store.elsevier.com/eu/book/9780123944245/digital-design-and-computer-architecture) |
-| **Modern Processor Design** | Shen & Lipasti | Deep dive into superscalar processor microarchitecture. | [Link](https://www.waveland.com/browse.php?t=384) |
-
----
+- [CMOS VLSI Design: A Circuits & Systems Perspective](https://www.pearson.com/en-us/subject-catalog/p/cmos-vlsi-design-a-circuits-and-systems-perspective/P200000009477/9780321547743) - Fundamentals of CMOS technology, circuits, and VLSI chip design by Weste & Harris.
+- [Computer Architecture: A Quantitative Approach](https://store.elsevier.com/eu/book/9780128119051/computer-architecture) - The definitive guide for graduate-level architecture by Hennessy & Patterson.
+- [Computer Organization and Design (RISC-V Edition)](https://store.elsevier.com/eu/book/9780128203316/computer-organization-and-design-risc-v-edition) - Best for undergraduate basics and RISC-V fundamentals by Patterson & Hennessy.
+- [Digital Design and Computer Architecture](https://store.elsevier.com/eu/book/9780123944245/digital-design-and-computer-architecture) - Connecting logic gates to processor design by Harris & Harris.
+- [Modern Processor Design](https://www.waveland.com/browse.php?t=384) - Deep dive into superscalar processor microarchitecture by Shen & Lipasti.
+- [Parallel Computer Architecture: A Hardware/Software Approach](https://store.elsevier.com/eu/book/9781558603431/parallel-computer-architecture) - The classic text on parallel computing and high-performance architecture by Culler, Singh, & Gupta.
+- [Principles and Practices of Interconnection Networks](https://store.elsevier.com/eu/book/9780122007514/principles-and-practices-of-interconnection-networks) - Definitive guide on router architecture, topology, and routing by Dally & Towles.
 
 ## Conferences
 
 The top-tier (Tier-1) academic conferences where the latest computer architecture research is published.
 
-| Conference | Description | Focus Area | Link |
-|------------|-------------|------------|------|
-| **ISCA** | Int'l Symposium on Computer Architecture | The premier forum for new ideas in computer architecture. | [ACM SIGARCH](https://www.sigarch.org/events/isca/) |
-| **MICRO** | Int'l Symposium on Microarchitecture | Advanced microarchitecture and compiler techniques. | [MICRO](https://www.microarch.org/) |
-| **HPCA** | Int'l Symposium on High-Performance Computer Architecture | High-performance system design and analysis. | [IEEE TCCA](https://www.computer.org/communities/technical-committees/tcca) |
-| **ASPLOS** | Architectural Support for Programming Languages and OS | The intersection of hardware, OS, and compilers. | [ACM SIGARCH](https://www.sigarch.org/events/asplos/) |
-
----
+- [ASPLOS](https://www.sigarch.org/events/asplos/) - Architectural Support for Programming Languages and OS; the intersection of hardware, OS, and compilers.
+- [HPCA](https://www.computer.org/communities/technical-committees/tcca) - International Symposium on High-Performance Computer Architecture; high-performance system design and analysis.
+- [ISCA](https://www.sigarch.org/events/isca/) - International Symposium on Computer Architecture; the premier forum for new ideas in computer architecture.
+- [MICRO](https://www.microarch.org/) - International Symposium on Microarchitecture; advanced microarchitecture and compiler techniques.
 
 ## Simulators
 
 ### CPU Simulators
-| Simulator | Description | Use Case | Link |
-|-----------|-------------|----------|------|
-| **gem5** | Modular, open-source CPU/SoC simulator. | Cache, branch prediction, OoO CPUs. | [gem5.org](https://www.gem5.org/) |
-| **QEMU** | Fast full-system emulator. | OS/software prototyping. | [qemu.org](https://www.qemu.org/) |
-| **SST** | Parallel simulator for large-scale systems. | HPC/SoC co-design. | [sst-simulator.org](https://sst-simulator.org/) |
-| **MARSSx86** | Cycle-accurate x86 simulator. *(low activity)* | x86 microarchitecture analysis. | [marss86.org](https://marss86.org/) |
-| **ZSim** | Fast, scalable x86-64 multicore simulator. | Cache hierarchy and NUCA research. | [ZSim](https://github.com/s5z/zsim) |
-| **Sniper** | Interval-based multicore simulator. | Large-scale CMP performance studies. | [Sniper](https://snipersim.org/) |
-| **ChampSim** | Trace-driven simulator for branch prediction and prefetching. | De-facto standard for branch/prefetch research (ISCA/MICRO). | [ChampSim](https://github.com/ChampSim/ChampSim) |
+
+- [ChampSim](https://github.com/ChampSim/ChampSim) - Trace-driven simulator for branch prediction and prefetching, considered a de-facto standard for ISCA/MICRO research.
+- [gem5](https://www.gem5.org/) - Modular, open-source CPU/SoC simulator used for studying cache, branch prediction, and out-of-order CPUs.
+- [MARSSx86](https://marss86.org/) - Cycle-accurate x86 simulator for x86 microarchitecture analysis.
+- [QEMU](https://www.qemu.org/) - Fast full-system emulator heavily used for OS and software prototyping.
+- [Sniper](https://snipersim.org/) - Interval-based multicore simulator for large-scale CMP performance studies.
+- [SST](https://sst-simulator.org/) - Parallel simulator for large-scale systems focusing on HPC/SoC co-design.
+- [ZSim](https://github.com/s5z/zsim) - Fast, scalable x86-64 multicore simulator for cache hierarchy and NUCA research.
 
 ### GPU/Accelerator Simulators
-| Simulator | Description | Use Case | Link |
-|-----------|-------------|----------|------|
-| **GPGPU-Sim** | Cycle-accurate NVIDIA GPU simulator. | CUDA kernel analysis. | [GPGPU-Sim](https://github.com/gpgpu-sim/gpgpu-sim_distribution) |
-| **Accel-Sim** | Validated GPU simulator for modern workloads. | Tensor cores and deep learning workloads. | [Accel-Sim](https://github.com/accel-sim/accel-sim-framework) |
-| **Timeloop** | Deep learning accelerator modeling framework. | Energy/performance optimization. | [Timeloop](https://github.com/NVlabs/timeloop) |
-| **SCALE-Sim** | Systolic array simulator for deep neural networks. | TPU-like architectures. | [SCALE-Sim](https://github.com/ARM-software/SCALE-Sim) |
-| **STONNE** | Cycle-level simulation framework for DL inference. | Design-space exploration for DL accelerators. | [STONNE](https://github.com/stonne-sim/stonne) |
 
-### Memory System Simulators  
-| Simulator | Description | Use Case | Link |
-|-----------|-------------|----------|------|
-| **DRAMSim3** | Cycle-accurate DRAM simulator. | DDRx/LPDDRx modeling. | [DRAMSim3](https://github.com/umd-memsys/DRAMsim3) |
-| **Ramulator** | Supports HBM, GDDR, and emerging memories. | Memory controller design. | [Ramulator](https://github.com/CMU-SAFARI/ramulator) |
-| **Ramulator 2** | Redesigned Ramulator with cleaner, modular API. | Next-gen memory protocol research. | [Ramulator2](https://github.com/CMU-SAFARI/ramulator2) |
-| **MQSim** | NVMe and SSD simulator. | Computational storage and near-data processing. | [MQSim](https://github.com/CMU-SAFARI/MQSim) |
+- [Accel-Sim](https://github.com/accel-sim/accel-sim-framework) - Validated GPU simulator for modern workloads like tensor cores and deep learning workloads.
+- [GPGPU-Sim](https://github.com/gpgpu-sim/gpgpu-sim_distribution) - Cycle-accurate NVIDIA GPU simulator for CUDA kernel analysis.
+- [SCALE-Sim](https://github.com/ARM-software/SCALE-Sim) - Systolic array simulator for deep neural networks and TPU-like architectures.
+- [STONNE](https://github.com/stonne-sim/stonne) - Cycle-level simulation framework for DL inference and design-space exploration for DL accelerators.
+- [Timeloop](https://github.com/NVlabs/timeloop) - Deep learning accelerator modeling framework for energy and performance optimization.
 
-### Full-System/Cloud Simulators  
-| Simulator       | Description                                  | Use Case                          | Link |  
-|-----------------|----------------------------------------------|-----------------------------------|------|  
-| **FireSim**     | FPGA-accelerated datacenter simulator.       | Cloud hardware research.          | [FireSim](https://fires.im/) |  
-| **Simics**      | Commercial full-system simulator.            | Enterprise virtual prototyping.   | [Simics](https://www.windriver.com/simics) |  
+### Memory System Simulators
 
-### RTL/FPGA Simulators  
-| Simulator       | Description                                  | Use Case                          | Link |  
-|-----------------|----------------------------------------------|-----------------------------------|------|  
-| **Verilator**   | Fast RTL-to-C++ simulator.                   | Pre-silicon verification.         | [Verilator](https://www.veripool.org/verilator/) |  
-| **VCS**         | Commercial RTL simulator (Synopsys).         | ASIC/FPGA validation.             | [VCS](https://www.synopsys.com/verification/simulation/vcs.html) |  
+- [DRAMSim3](https://github.com/umd-memsys/DRAMsim3) - Cycle-accurate DRAM simulator for DDRx and LPDDRx modeling.
+- [MQSim](https://github.com/CMU-SAFARI/MQSim) - NVMe and SSD simulator for computational storage and near-data processing.
+- [Ramulator](https://github.com/CMU-SAFARI/ramulator) - Supports HBM, GDDR, and emerging memories for memory controller design.
+- [Ramulator 2](https://github.com/CMU-SAFARI/ramulator2) - Redesigned Ramulator with a cleaner, modular API for next-generation memory protocol research.
 
-### Specialized/Historical Tools  
-| Simulator       | Description                                  | Use Case                          | Link |  
-|-----------------|----------------------------------------------|-----------------------------------|------|  
-| **Spike**       | RISC-V ISA reference simulator.              | RISC-V software dev.              | [Spike](https://github.com/riscv-software-src/riscv-isa-sim) |  
-| **SimpleScalar**| Classic CPU simulator (deprecated).          | Teaching pipeline basics.         | [Archive](http://www.simplescalar.com/) |  
+### Full-System/Cloud Simulators
 
----
+- [FireSim](https://fires.im/) - FPGA-accelerated datacenter simulator for cloud hardware research.
+- [Simics](https://www.windriver.com/simics) - Commercial full-system simulator for enterprise virtual prototyping.
+
+### RTL/FPGA Simulators
+
+- [VCS](https://www.synopsys.com/verification/simulation/vcs.html) - Commercial RTL simulator by Synopsys for ASIC/FPGA validation.
+- [Verilator](https://www.veripool.org/verilator/) - Fast RTL-to-C++ simulator for pre-silicon verification.
+
+### Specialized/Historical Tools
+
+- [SimpleScalar](http://www.simplescalar.com/) - Classic CPU simulator generally used for teaching pipeline basics.
+- [Spike](https://github.com/riscv-software-src/riscv-isa-sim) - RISC-V ISA reference simulator for RISC-V software development.
 
 ## Benchmarks
 
 Benchmark suites crucial for evaluating computer system performance, selected based on their relevance and widespread use in academic research and industry.
 
-| Benchmark | Description | Use Case | Link |
-|-----------|-------------|----------|------|
-| **SPEC CPU2017** | Standard benchmark suite for CPU performance. | CPU performance evaluation. | [SPEC CPU2017](https://www.spec.org/cpu2017) |
-| **PARSEC 3.0** | Benchmark suite for shared-memory computers. | Multicore research. | [PARSEC 3.0](http://parsec.cs.princeton.edu) |
-| **SPLASH-2** | Shared-memory parallel programs. | Cache coherence and multicore studies. | [SPLASH-2](https://github.com/SakalisC/Splash-2) |
-| **Rodinia v3.1** | Heterogeneous computing benchmark suite. | GPU and heterogeneous architectures. | [Rodinia v3.1](https://rodinia.cs.virginia.edu) |
-| **MLPerf** | Industry-standard ML hardware benchmark suite. | AI accelerator and GPU evaluation. | [MLPerf](https://mlcommons.org/en/inference-datacenter/) |
-| **MiBench** | Benchmark suite for embedded systems. | Embedded systems performance. | [MiBench](https://vhosts.eecs.umich.edu/mibench) |
-| **NAS Parallel Benchmark 3.4.2** | High-performance computing benchmarks. | Parallel systems performance. | [NAS NPB](https://www.nas.nasa.gov/publications/npb.html) |
-| **STREAM** | Measures memory bandwidth. | Memory system evaluation. | [STREAM](https://www.cs.virginia.edu/~stream) |
-| **Graph500** | Graph-based workload benchmark. | Memory-bound and graph analytics research. | [Graph500](https://graph500.org/) |
-| **PolyBench/C 4.2** | Kernel benchmark suite for compilers. | Compiler and performance optimization. | [PolyBench/C](https://sourceforge.net/p/polybench/home/HOME) |
-
----
+- [Graph500](https://graph500.org/) - Graph-based workload benchmark for memory-bound and graph analytics research.
+- [MiBench](https://vhosts.eecs.umich.edu/mibench) - Benchmark suite for evaluating embedded systems performance.
+- [MLPerf](https://mlcommons.org/en/inference-datacenter/) - Industry-standard ML hardware benchmark suite for AI accelerator and GPU evaluation.
+- [NAS Parallel Benchmark 3.4.2](https://www.nas.nasa.gov/publications/npb.html) - High-performance computing benchmarks for parallel systems performance.
+- [PARSEC 3.0](http://parsec.cs.princeton.edu) - Benchmark suite for shared-memory computers, heavily used in multicore research.
+- [PolyBench/C 4.2](https://sourceforge.net/p/polybench/home/HOME) - Kernel benchmark suite for compilers and performance optimization.
+- [Rodinia v3.1](https://rodinia.cs.virginia.edu) - Heterogeneous computing benchmark suite for GPU and heterogeneous architectures.
+- [SPEC CPU2017](https://www.spec.org/cpu2017) - Standard benchmark suite for comprehensive CPU performance evaluation.
+- [SPLASH-2](https://github.com/SakalisC/Splash-2) - Shared-memory parallel programs for cache coherence and multicore studies.
+- [STREAM](https://www.cs.virginia.edu/~stream) - Synthetic benchmark program that measures sustainable memory bandwidth.
 
 ## Tools for Research
 
 Essential tools categorized for performance analysis, power measurement, design, and visualization.
 
-| Category | Tool | Description | Link |
-|----------|------|-------------|------|
-| **Performance Analysis** | **Linux perf** | Profiling tool for Linux systems. | [Linux perf](https://perf.wiki.kernel.org/index.php/Tutorial) |
-| | **Intel VTune** | Detailed performance analysis for Intel architectures. | [Intel VTune](https://www.intel.com/content/www/en-us/products/tools/performance-tools/vtune.html) |
-| | **ARM Development Studio** | Performance tools for ARM architectures. | [ARM Studio](https://developer.arm.com/tools-and-software/embedded/embedded-tools/development-tools) |
-| | **Valgrind / Cachegrind** | Memory profiling and cache simulation. | [Valgrind](https://valgrind.org/) |
-| | **Intel Pin** | Dynamic binary instrumentation framework. | [Intel Pin](https://www.intel.com/content/www/en-us/developer/articles/tool/pin-a-dynamic-binary-instrumentation-tool.html) |
-| **Power & Energy** | **McPAT** | Power, area, and timing modeling framework. | [McPAT](https://github.com/HewlettPackard/mcpat) |
-| | **CACTI** | DRAM/SRAM cache power/area model. | [CACTI](https://github.com/HewlettPackard/cacti) |
-| | **Wattch** | Power modeling integrated with cycle-level simulators. | [Wattch](http://www.eecs.harvard.edu/~dbrooks/wattch-form.html) |
-| | **Intel Power Gadget** | Energy measurement tool for Intel processors. | [Power Gadget](https://www.intel.com/content/www/en-us/products/docs/processors/intel-core/intel-power-gadget.html) |
-| **Design Language** | **Chisel** | Hardware construction language for custom processors. | [Chisel](https://chisel-lang.org) |
-| | **Bluespec SystemVerilog** | High-level language for hardware design. | [Bluespec](https://bluespec.com/products/bluespec-systemverilog) |
-| | **LLVM** | Compiler infrastructure widely used in arch research. | [LLVM](https://llvm.org/) |
-| **Visualization** | **Flame Graphs** | Performance visualization tool. | [Flame Graphs](https://github.com/brendangregg/FlameGraph) |
-| | **SpeedScope** | Web-based profiling data analysis tool. | [SpeedScope](https://www.speedscope.dev) |
+### Performance Analysis
 
----
+- [ARM Development Studio](https://developer.arm.com/tools-and-software/embedded/embedded-tools/development-tools) - Performance tools for ARM architectures.
+- [Intel VTune](https://www.intel.com/content/www/en-us/products/tools/performance-tools/vtune.html) - Detailed performance analysis for Intel architectures.
+- [Linux perf](https://perf.wiki.kernel.org/index.php/Tutorial) - Profiling tool for Linux systems.
+
+### Power & Energy
+
+- [CACTI](https://github.com/HewlettPackard/cacti) - DRAM and SRAM cache power and area model.
+- [Intel Power Gadget](https://www.intel.com/content/www/en-us/products/docs/processors/intel-core/intel-power-gadget.html) - Energy measurement tool for Intel processors.
+- [McPAT](https://github.com/HewlettPackard/mcpat) - Power, area, and timing modeling framework.
+- [Wattch](http://www.eecs.harvard.edu/~dbrooks/wattch-form.html) - Power modeling integrated with cycle-level simulators.
+
+### Design Language
+
+- [Bluespec SystemVerilog](https://bluespec.com/products/bluespec-systemverilog) - High-level language for hardware design.
+- [Chisel](https://chisel-lang.org) - Hardware construction language for custom processors.
+
+### Visualization
+
+- [Flame Graphs](https://github.com/brendangregg/FlameGraph) - Performance visualization tool.
+- [SpeedScope](https://www.speedscope.dev) - Web-based profiling data analysis tool.
 
 ## ISA References & Specs
 
 Official specifications and reference manuals for major instruction set architectures.
 
-| ISA | Description | Link |
-|-----|-------------|------|
-| **RISC-V Spec** | Official unprivileged and privileged ISA specifications. | [RISC-V Specs](https://github.com/riscv/riscv-isa-manual/releases) |
-| **ARM Architecture Reference Manual** | Complete ARMv8/v9 ISA reference. | [ARM ARM](https://developer.arm.com/documentation/ddi0487/latest) |
-| **Intel x86 Software Developer Manuals** | Full x86-64 ISA and microarchitecture reference. | [Intel SDM](https://www.intel.com/content/www/en-us/developer/articles/technical/intel-sdm.html) |
-| **AMD64 Architecture Programmer's Manual** | AMD's x86-64 ISA reference. | [AMD APM](https://www.amd.com/en/support/tech-docs/amd64-architecture-programmers-manual-volumes-1-5) |
-| **MIPS Architecture** | Classic MIPS ISA reference, useful for teaching. | [MIPS Docs](https://www.mips.com/products/architectures/) |
-
----
+- [AMD64 Architecture Programmer's Manual](https://www.amd.com/en/support/tech-docs/amd64-architecture-programmers-manual-volumes-1-5) - AMD's x86-64 ISA reference.
+- [ARM Architecture Reference Manual](https://developer.arm.com/documentation/ddi0487/latest) - Complete ARMv8/v9 ISA reference.
+- [Intel x86 Software Developer Manuals](https://www.intel.com/content/www/en-us/developer/articles/technical/intel-sdm.html) - Full x86-64 ISA and microarchitecture reference.
+- [MIPS Architecture](https://www.mips.com/products/architectures/) - Classic MIPS ISA reference, useful for teaching.
+- [RISC-V Spec](https://github.com/riscv/riscv-isa-manual/releases) - Official unprivileged and privileged ISA specifications.
 
 ## Compilers & Binary Analysis
 
-Tools for compiler research, binary instrumentation, and code generation — tightly coupled to architecture research.
+Tools for compiler research, binary instrumentation, and code generation.
 
-| Tool | Description | Use Case | Link |
-|------|-------------|----------|------|
-| **LLVM** | Modular compiler infrastructure and IR framework. | Custom backends, pass development, arch-aware optimization. | [LLVM](https://llvm.org/) |
-| **GCC** | GNU Compiler Collection with broad architecture support. | Cross-compilation and ISA-level code generation. | [GCC](https://gcc.gnu.org/) |
-| **Intel Pin** | Dynamic binary instrumentation framework. | Trace generation, profiling, microarch analysis. | [Intel Pin](https://www.intel.com/content/www/en-us/developer/articles/tool/pin-a-dynamic-binary-instrumentation-tool.html) |
-| **DynamoRIO** | Runtime code manipulation framework. | Dynamic analysis and custom instrumentation. | [DynamoRIO](https://dynamorio.org/) |
-| **Valgrind** | Instrumentation framework for dynamic analysis. | Memory error detection, cache profiling (Cachegrind). | [Valgrind](https://valgrind.org/) |
-| **Capstone** | Lightweight multi-architecture disassembly framework. | Binary analysis and reverse engineering. | [Capstone](https://www.capstone-engine.org/) |
-
----
+- [Capstone](https://www.capstone-engine.org/) - Lightweight multi-architecture disassembly framework for binary analysis and reverse engineering.
+- [DynamoRIO](https://dynamorio.org/) - Runtime code manipulation framework for dynamic analysis and custom instrumentation.
+- [GCC](https://gcc.gnu.org/) - GNU Compiler Collection with broad architecture support for cross-compilation and ISA-level code generation.
+- [Intel Pin](https://www.intel.com/content/www/en-us/developer/articles/tool/pin-a-dynamic-binary-instrumentation-tool.html) - Dynamic binary instrumentation framework for trace generation, profiling, and microarch analysis.
+- [LLVM](https://llvm.org/) - Modular compiler infrastructure and IR framework for custom backends, pass development, and arch-aware optimization.
+- [Valgrind](https://valgrind.org/) - Instrumentation framework for dynamic analysis, memory error detection, and cache profiling.
 
 ## Traces & Datasets
 
 Memory, branch, and instruction traces used as inputs for simulators and predictor research.
 
-| Dataset | Description | Use Case | Link |
-|---------|-------------|----------|------|
-| **CVP-1 Traces** | Branch predictor traces from the Championship Value Prediction competition. | Branch prediction and value prediction research. | [CVP-1](https://www.microarch.org/cvp1/) |
-| **CRC2 Traces** | Traces from the Cache Replacement Championship. | Cache replacement policy research. | [CRC2](https://crc2.ece.tamu.edu/) |
-| **SPEC CPU Traces** | Instruction and memory traces derived from SPEC workloads. | Simulator input for cache/branch studies. | [Scarab Traces](https://github.com/hpsresearchgroup/scarab) |
-| **DPC-3 Traces** | Traces from the Data Prefetching Championship. | Prefetcher design and evaluation. | [DPC-3](https://dpc3.compas.cs.stonybrook.edu/) |
-| **ML Perf Inference Traces** | Inference workload traces for AI accelerator research. | LLM and DNN hardware evaluation. | [MLCommons](https://mlcommons.org/) |
-
----
+- [CRC2 Traces](https://crc2.ece.tamu.edu/) - Traces from the Cache Replacement Championship for replacement policy research.
+- [CVP-1 Traces](https://www.microarch.org/cvp1/) - Branch predictor traces from the Championship Value Prediction.
+- [DPC-3 Traces](https://dpc3.compas.cs.stonybrook.edu/) - Traces from the Data Prefetching Championship for prefetcher design and evaluation.
+- [MLPerf Inference Traces](https://mlcommons.org/) - Inference workload traces for AI accelerator research and LLM hardware evaluation.
+- [SPEC CPU Traces](https://github.com/hpsresearchgroup/scarab) - Instruction and memory traces derived from SPEC workloads for simulator input.
 
 ## Tutorials
 
 Online courses and specific guides for learning computer architecture, catering to both beginners and graduate researchers.
 
-| Tutorial | Description | Link |
-|----------|-------------|------|
-| **Princeton Computer Architecture** | Comprehensive architecture course for graduate students (Coursera). | [Princeton Course](https://www.coursera.org/learn/comparch) |
-| **Georgia Tech HPCA** | Advanced course on high-performance computer architecture (YouTube). | [Georgia Tech HPCA](https://www.youtube.com/playlist?list=PLAwxTw4SYaPmqpjgrmf4-DGlaeV0om4iP) |
-| **MIT 6.004 Computation Structures** | Foundational digital design and architecture course (MIT OCW). | [MIT OCW](https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/) |
-| **gem5 Tutorials** | Official tutorials for hands-on learning with the gem5 simulator. | [gem5 Learning](https://www.gem5.org/documentation/learning_gem5/introduction/) |
-| **gem5 Bootcamp** | Recorded sessions from the official gem5 bootcamp. | [gem5 Bootcamp](https://www.youtube.com/@gem5simulator) |
-| **RISC-V Tutorials** | Official learning resources for the open standard RISC-V ISA. | [RISC-V Learn](https://github.com/riscv/learn) |
-| **David Patterson RISC-V Lectures** | Lectures by the co-inventor of RISC-V on modern ISA design. | [YouTube](https://www.youtube.com/results?search_query=david+patterson+risc-v) |
-| **GPU Architecture Tutorial** | Detailed explanation of GPU architecture internals. | [GPU Tutorial](https://medium.com/codex/understanding-the-architecture-of-a-gpu-d5d2d2e8978b) |
-
----
+- [David Patterson RISC-V Lectures](https://www.youtube.com/results?search_query=david+patterson+risc-v) - Lectures by the co-inventor of RISC-V on modern ISA design.
+- [gem5 Bootcamp](https://www.youtube.com/@gem5simulator) - Recorded sessions from the official gem5 bootcamp.
+- [gem5 Tutorials](https://www.gem5.org/documentation/learning_gem5/introduction/) - Official tutorials for hands-on learning with the gem5 simulator.
+- [Georgia Tech HPCA](https://www.youtube.com/playlist?list=PLAwxTw4SYaPmqpjgrmf4-DGlaeV0om4iP) - Advanced course on high-performance computer architecture.
+- [GPU Architecture Tutorial](https://medium.com/codex/understanding-the-architecture-of-a-gpu-d5d2d2e8978b) - Detailed explanation of GPU architecture internals.
+- [MIT 6.004 Computation Structures](https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/) - Foundational digital design and architecture course.
+- [Princeton Computer Architecture](https://www.coursera.org/learn/comparch) - Comprehensive architecture course for graduate students.
+- [RISC-V Tutorials](https://github.com/riscv/learn) - Official learning resources for the open standard RISC-V ISA.
 
 ## Cutting-Edge Research & Emerging Architectures
 
-This section tracks tools and frameworks actively used in recent top-tier publications (ISCA, MICRO, HPCA, ASPLOS) to evaluate next-generation computing paradigms.
+Tools and frameworks actively used in recent top-tier publications (ISCA, MICRO, HPCA, ASPLOS) to evaluate next-generation computing paradigms.
 
 ### AI & Large Language Model (LLM) Hardware
-With the scaling of AI, research heavily focuses on spatial architectures, sparsity, and Transformer-specific optimizations.
 
-| Framework/Tool | Description | Research Application | Link |
-| :--- | :--- | :--- | :--- |
-| **Accel-Sim** | Validated GPU simulator for modern workloads. | Evaluating tensor cores and deep learning workloads. | [Accel-Sim](https://github.com/accel-sim/accel-sim-framework) |
-| **ASTRA-sim** | Distributed deep learning training simulator. | Modeling multi-GPU communication and network endpoints. | [ASTRA-sim](https://github.com/astra-sim/astra-sim) |
-| **Sparseloop** | Analytical modeling for sparse tensor accelerators. | Exploring hardware exploitation of un-structured/structured sparsity. | [Sparseloop](https://github.com/mit-emesh/sparseloop) |
-| **Timeloop + Accelergy**| Joint performance and energy modeling. | Full design-space exploration for AI chips and DNN accelerators. | [Accelergy](https://github.com/HewlettPackard/accelergy) |
+- [ASTRA-sim](https://github.com/astra-sim/astra-sim) - Distributed deep learning training simulator for modeling multi-GPU communication and network endpoints.
+- [Sparseloop](https://github.com/mit-emesh/sparseloop) - Analytical modeling for sparse tensor accelerators exploring hardware exploitation of un-structured/structured sparsity.
+- [Timeloop + Accelergy](https://github.com/HewlettPackard/accelergy) - Joint performance and energy modeling for full design-space exploration of AI chips and DNN accelerators.
 
 ### Advanced Packaging & Chiplets (2.5D/3D Integration)
-As Moore's Law slows, multi-die systems connected via advanced packaging (e.g., UCIe) are dominating research.
 
-| Tool | Description | Research Application | Link |
-| :--- | :--- | :--- | :--- |
-| **Booksim2** | Cycle-accurate network-on-chip (NoC) simulator. | Modeling Network-on-Interposer (NoI) and chiplet routing. | [Booksim2](https://github.com/booksim/booksim2) |
-| **Garnet (gem5)** | Detailed NoC model integrated into gem5. | On-chip network design and evaluation. | [Garnet](https://www.gem5.org/documentation/general_docs/ruby/garnet-2/) |
+- [Booksim2](https://github.com/booksim/booksim2) - Cycle-accurate network-on-chip (NoC) simulator for modeling Network-on-Interposer (NoI) and chiplet routing.
+- [Garnet (gem5)](https://www.gem5.org/documentation/general_docs/ruby/garnet-2/) - Detailed NoC model integrated into gem5 for on-chip network design and evaluation.
 
 ### Memory Disaggregation & Processing-in-Memory (PIM)
-Compute Express Link (CXL) and in-memory computing are reshaping the memory hierarchy.
 
-| Tool/Standard | Description | Research Application | Link |
-| :--- | :--- | :--- | :--- |
-| **MQSim** | NVMe and SSD simulator. | Computational storage and near-data processing. | [MQSim](https://github.com/CMU-SAFARI/MQSim) |
-| **Ramulator 2** | Modular DRAM simulator with CXL support. | Evaluating latency and bandwidth of tiered memory systems. | [Ramulator2](https://github.com/CMU-SAFARI/ramulator2) |
-| **CXL Consortium** | Official CXL specification and resources. | Understanding CXL memory pooling and coherency protocols. | [CXL Consortium](https://www.computeexpresslink.org/) |
-| **PIMulator** | Simulation framework for PIM architectures. | Near-data processing and PIM design exploration. | [PIMulator](https://github.com/CMU-SAFARI/pimulator) |
+- [CXL Consortium](https://www.computeexpresslink.org/) - Official CXL specification and resources for understanding CXL memory pooling and coherency protocols.
+- [PIMulator](https://github.com/CMU-SAFARI/pimulator) - Simulation framework for near-data processing and PIM design exploration.
 
 ### Hardware Security & Confidential Computing
-Protecting microarchitectures against transient execution attacks and side-channels.
 
-| Tool | Description | Research Application | Link |
-| :--- | :--- | :--- | :--- |
-| **Revizor** | Microarchitectural fuzzing tool. | Detecting automated hardware information leaks (e.g., Spectre variants). | [Revizor](https://github.com/microsoft/revizor) |
-| **SoftMC** | FPGA-based DRAM testing framework. | Discovering and mitigating Rowhammer vulnerabilities in DDR4/DDR5. | [SoftMC](https://github.com/CMU-SAFARI/SoftMC) |
-
----
+- [Revizor](https://github.com/microsoft/revizor) - Microarchitectural fuzzing tool for detecting automated hardware information leaks like Spectre variants.
+- [SoftMC](https://github.com/CMU-SAFARI/SoftMC) - FPGA-based DRAM testing framework for discovering and mitigating Rowhammer vulnerabilities in DDR4/DDR5.
 
 ## Elite Research Labs in Computer Architecture & Systems
-Below is a non-exhaustive list of 20 highly influential research groups in computer architecture and closely related systems areas (e.g., accelerators, memory systems, datacenters, HW/SW co-design). These labs are well known for sustained, high-impact contributions in venues such as ISCA, MICRO, HPCA, and ASPLOS.
 
-| University / Institution | Lab / Group Name | Key Focus Areas & Notes | Link |
-| :--- | :--- | :--- | :--- |
-| **ETH Zurich** | **SAFARI Research Group** | Processing-in-Memory (PIM), DRAM and NVM architectures, Rowhammer, memory controllers, storage systems, and bioinformatics acceleration. Highly influential across all major architecture venues. | [SAFARI](https://safari.ethz.ch/) |
-| **Georgia Tech** | **Synergy Lab** | Deep learning accelerators, Networks-on-Chip (NoC), spatial architectures, HW/SW co-design, and performance modeling (e.g., MAESTRO, ASTRO-sim). | [Synergy](http://synergy.ece.gatech.edu/) |
-| **UC Berkeley** | **ADEPT Lab** | RISC‑V ecosystem, agile hardware design, warehouse-scale computing, and open-source silicon tools such as Chisel and FireSim. | [ADEPT](https://adept.cs.berkeley.edu/) |
-| **MIT** | **CSAIL – Computer Systems Group (CSG)** | Parallel architectures, spatial accelerators (Timeloop/Accelergy), cache coherence, secure hardware, and programmable architectures for ML and data analytics. | [MIT CSG](http://csg.csail.mit.edu/) |
-| **UT Austin** | **HPS / LCA** | Core microarchitecture, branch prediction, cache and memory hierarchies, GPU memory systems, reliability, and performance modeling. | [UT Austin Arch](https://www.ece.utexas.edu/research/computer-architecture-and-embedded-systems) |
-| **Univ. of Washington** | **Sampa** | Large-scale systems, approximate computing, DNA data storage, machine learning systems, and new computing substrates. | [Sampa](https://sampa.cs.washington.edu/) |
-| **Univ. of Michigan** | **Computer Engineering (CE) Lab** | Secure and trustworthy hardware, in-memory computing (e.g., compute caches), energy-efficient architectures, and low-power embedded systems. | [UMich CE](https://ce.eecs.umich.edu/) |
-| **UIUC** | **Computer Architecture Group** | Memory consistency models, high-performance and manycore architectures, hardware security, and parallel programming models. | [UIUC Arch](https://cs.illinois.edu/research/areas/architecture-compilers-and-parallel-computing) |
-| **Cornell University** | **Computer Systems Laboratory (CSL)** | Hardware–software co-design, datacenter networking microarchitecture, secure enclaves, and scalable server architectures. | [Cornell CSL](https://csl.cornell.edu/) |
-| **Stanford University** | **AHA (Agile Hardware) / MAST** | Domain-specific accelerators, CGRAs and reconfigurable fabrics, memory systems, and agile hardware design methodologies. | [Stanford AHA](https://aha.stanford.edu/) |
-| **Univ. of Wisconsin–Madison** | **Vertical / Multifacet** | Classic and modern CPU microarchitecture, multiprocessors, memory systems, heterogeneous and GPU architectures. | [UW Arch](https://www.cs.wisc.edu/research/computer-architecture/) |
-| **Princeton University** | **Princeton Parallel Group** | Manycore processor architectures (OpenPiton), scalable memory systems, datacenter and cloud architectures, and HW/SW co-design. | [Princeton Parallel](https://parallel.princeton.edu/) |
-| **Univ. of Toronto** | **EcoSystem / CSNA** | Energy-efficient ML systems, neural accelerators, compression, GPU microarchitecture, and memory systems for AI workloads. | [EcoSystem](https://ecosystem.cs.toronto.edu/) |
-| **EPFL** | **PARSA / EcoCloud** | Datacenter and cloud server architectures, rack-scale computing, energy-efficient computing, and hardware support for big data. | [EcoCloud](https://www.epfl.ch/research/domains/ecocloud/) |
-| **UCLA** | **VAST Lab / CDSC** | Domain-specific computing, FPGA and heterogeneous acceleration, high-level synthesis, and automated design tools for ML hardware. | [VAST Lab](https://vast.cs.ucla.edu/) |
-| **Carnegie Mellon University** | **Computer Architecture & Systems (various groups)** | Storage systems, non-volatile memories, accelerators, parallel systems, and operating systems/hardware co-design. | [CMU ECE Systems](https://www.ece.cmu.edu/research/computer-systems/index.html) |
-| **University of Cambridge** | **Computer Architecture Group** | Manycore and interconnect architectures, memory systems, on-chip networks, and secure/low-power processor design. | [Cambridge Arch](https://www.cst.cam.ac.uk/research/themes/computer-architecture) |
-| **Tsinghua University** | **Computer Architecture & Systems Groups** | High-performance processors, accelerators for AI and HPC, memory systems, and heterogeneous computing platforms. | [Tsinghua CS](https://www.cs.tsinghua.edu.cn/en/) |
-| **University of Illinois (UIUC) – CSL** | **iCAN / IMPACT lineage** | Compiler–architecture co-design, vector/SIMD and accelerator architectures, domain-specific processors, and performance optimization. | [UIUC CSL](https://csl.illinois.edu/) |
-| **University of Texas at Austin** | **Texas Systems Research Consortium (UT + partners)** | Large-scale systems, datacenter architecture, storage, and cloud-scale performance engineering, often in close collaboration with architecture groups. | [Texas Systems](https://www.cs.utexas.edu/research/computer-systems) |
+Highly influential research groups well known for sustained, high-impact contributions in venues such as ISCA, MICRO, HPCA, and ASPLOS.
 
-> **Note:** This list is illustrative rather than exhaustive. It focuses on groups broadly recognized for sustained, high-impact work in computer architecture and closely related systems/accelerator research.
-
----
+- [Cambridge Arch Group](https://www.cst.cam.ac.uk/research/themes/computer-architecture) - Manycore/interconnect architectures, memory systems, on-chip networks, secure/low-power design.
+- [CMU ECE Systems](https://www.ece.cmu.edu/research/computer-systems/index.html) - Storage systems, non-volatile memories, accelerators, parallel systems, and operating systems/hardware co-design.
+- [Cornell CSL](https://csl.cornell.edu/) - HW/SW co-design, datacenter networking microarchitecture, secure enclaves, scalable servers.
+- [EPFL EcoCloud](https://www.epfl.ch/research/domains/ecocloud/) - Datacenter/cloud servers, rack-scale computing, energy-efficient computing, big data HW.
+- [ETH Zurich SAFARI](https://safari.ethz.ch/) - PIM, DRAM/NVM architectures, Rowhammer, memory controllers, storage systems, bioinformatics.
+- [Georgia Tech Synergy Lab](http://synergy.ece.gatech.edu/) - Deep learning accelerators, NoC, spatial architectures, HW/SW co-design, performance modeling.
+- [MIT CSG](http://csg.csail.mit.edu/) - Parallel architectures, spatial accelerators, cache coherence, secure HW, programmable ML HW.
+- [Princeton Parallel Group](https://parallel.princeton.edu/) - Manycore processors, scalable memory systems, datacenter/cloud architectures, HW/SW co-design.
+- [Stanford AHA](https://aha.stanford.edu/) - Domain-specific accelerators, CGRAs, reconfigurable fabrics, memory systems, agile HW design.
+- [Tsinghua CS](https://www.cs.tsinghua.edu.cn/en/) - High-performance processors, accelerators for AI and HPC, memory systems, heterogeneous systems.
+- [UC Berkeley ADEPT Lab](https://adept.cs.berkeley.edu/) - RISC-V ecosystem, agile HW design, warehouse-scale computing, open-source silicon tools.
+- [UCLA VAST Lab](https://vast.cs.ucla.edu/) - Domain-specific computing, FPGA/heterogeneous acceleration, HLS, automated ML HW design tools.
+- [UIUC Architecture](https://cs.illinois.edu/research/areas/architecture-compilers-and-parallel-computing) - Memory consistency, high-performance/manycore architectures, HW security, parallel programming.
+- [UMich CE Lab](https://ce.eecs.umich.edu/) - Secure/trustworthy HW, in-memory computing, energy-efficient architectures, embedded systems.
+- [Univ. of Toronto EcoSystem](https://ecosystem.cs.toronto.edu/) - Energy-efficient ML systems, neural accelerators, compression, GPU microarch, memory for AI.
+- [UT Austin Arch](https://www.ece.utexas.edu/research/computer-architecture-and-embedded-systems) - Core microarch, branch prediction, cache/memory hierarchies, GPU memory systems, reliability.
+- [UW Sampa](https://sampa.cs.washington.edu/) - Large-scale systems, approximate computing, DNA data storage, ML systems, new HW substrates.
+- [UW-Madison Arch](https://www.cs.wisc.edu/research/computer-architecture/) - Classic/modern CPU microarch, multiprocessors, memory systems, heterogeneous/GPU architectures.
 
 ## Hall of Fame
 
-To find the most influential researchers in the field, refer to the official Hall of Fame registries maintained by the top-tier conferences based on paper publication counts.
+Official Hall of Fame registries maintained by the top-tier conferences based on paper publication counts.
 
-*   **[ISCA Hall of Fame](https://pages.cs.wisc.edu/~arch/www/iscahof.html)**: Recognizes authors with $8$ or more papers in the International Symposium on Computer Architecture.
-*   **[MICRO Hall of Fame](https://www.microarch.org/hof/)**: Recognizes authors with $8$ or more papers in the International Symposium on Microarchitecture.
-*   **[HPCA Hall of Fame](https://www.computer.org/communities/technical-committees/tcca/awards/hpca-hall-of-fame)**: Recognizes authors who have made significant contributions to HPCA over the years.
+- [HPCA Hall of Fame](https://www.computer.org/communities/technical-committees/tcca/awards/hpca-hall-of-fame) - Recognizes authors who have made significant contributions to HPCA over the years.
+- [ISCA Hall of Fame](https://pages.cs.wisc.edu/~arch/www/iscahof.html) - Recognizes authors with 8 or more papers in the International Symposium on Computer Architecture.
+- [MICRO Hall of Fame](https://www.microarch.org/hof/) - Recognizes authors with 8 or more papers in the International Symposium on Microarchitecture.
 
----
-
-## How to Contribute
+## Contributing
 
 Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to add new tools, benchmarks, or tutorials to this list.
-
-## License
-[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
-
-To the extent possible under law, [aliyasoubi](https://github.com/aliyasoubi) has waived all copyright and related or neighboring rights to this work.

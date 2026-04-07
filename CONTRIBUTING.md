@@ -11,6 +11,7 @@ Please ensure your pull request adheres to the following guidelines:
 - Add the item to the correct category in alphabetical order.
 
 **Format:**
-`| **Name** | Description | Use Case | [Link](URL) |`
+`- [Name](link) - Description.`
+(Description must start with a capital letter and end with a period).
 
 Thank you for your suggestions!
