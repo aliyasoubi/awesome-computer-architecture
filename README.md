@@ -1,6 +1,6 @@
 # Awesome Computer Architecture [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-Computer architecture resources, including simulators, benchmarks, tools, and tutorials for researchers, graduate students, and hardware engineers.
+> Computer architecture resources, including simulators, benchmarks, tools, and tutorials for researchers, graduate students, and hardware engineers.
 
 ## Contents
 
@@ -28,10 +28,11 @@ Computer architecture resources, including simulators, benchmarks, tools, and tu
   - [Advanced Packaging & Chiplets (2.5D/3D Integration)](#advanced-packaging--chiplets-25d3d-integration)
   - [Memory Disaggregation & Processing-in-Memory (PIM)](#memory-disaggregation--processing-in-memory-pim)
   - [Hardware Security & Confidential Computing](#hardware-security--confidential-computing)
-- [Elite Research Labs in Computer Architecture & Systems](#elite-research-labs-in-computer-architecture--systems)
+- [Research Labs in Computer Architecture & Systems](#research-labs-in-computer-architecture--systems)
+  - [Notable & Highly Influential Labs](#notable--highly-influential-labs)
+  - [Core Labs](#core-labs)
+  - [Additional Architecture & Systems Labs](#additional-architecture--systems-labs)
 - [Hall of Fame](#hall-of-fame)
-
----
 
 ## Books
 
@@ -70,7 +71,7 @@ The top-tier (Tier-1) academic conferences where the latest computer architectur
 - [Accel-Sim](https://github.com/accel-sim/accel-sim-framework) - Validated GPU simulator for modern workloads like tensor cores and deep learning workloads.
 - [GPGPU-Sim](https://github.com/gpgpu-sim/gpgpu-sim_distribution) - Cycle-accurate NVIDIA GPU simulator for CUDA kernel analysis.
 - [SCALE-Sim](https://github.com/ARM-software/SCALE-Sim) - Systolic array simulator for deep neural networks and TPU-like architectures.
-- [STONNE](https://stonne-simulator.github.io) - is a cycle-level microarchitectural simulator for flexible DNN inference accelerators.
+- [STONNE](https://stonne-simulator.github.io) - Cycle-level microarchitectural simulator for flexible DNN inference accelerators.
 - [Timeloop](https://github.com/NVlabs/timeloop) - Deep learning accelerator modeling framework for energy and performance optimization.
 
 ### Memory System Simulators
@@ -101,11 +102,11 @@ Benchmark suites crucial for evaluating computer system performance, selected ba
 
 - [Graph500](https://graph500.org/) - Graph-based workload benchmark for memory-bound and graph analytics research.
 - [MiBench](https://vhosts.eecs.umich.edu/mibench) - Benchmark suite for evaluating embedded systems performance.
-- [MLPerf](https://mlcommons.org/en/inference-datacenter/) - Industry-standard ML hardware benchmark suite for AI accelerator and GPU evaluation.
-- [NAS Parallel Benchmark 3.4.2](https://www.nas.nasa.gov/publications/npb.html) - High-performance computing benchmarks for parallel systems performance.
-- [PARSEC 3.0](https://github.com/connorimes/parsec-3.0) - Benchmark suite for shared-memory computers, heavily used in multicore research.
-- [PolyBench/C 4.2](https://sourceforge.net/p/polybench/home/HOME) - Kernel benchmark suite for compilers and performance optimization.
-- [Rodinia v3.1](https://rodinia.cs.virginia.edu) - Heterogeneous computing benchmark suite for GPU and heterogeneous architectures.
+- [MLPerf](https://mlcommons.org/benchmarks/inference-datacenter/) - Industry-standard ML hardware benchmark suite for AI accelerator and GPU evaluation.
+- [NAS Parallel Benchmarks](https://www.nas.nasa.gov/publications/npb.html) - High-performance computing benchmarks for parallel systems performance.
+- [PARSEC](https://github.com/connorimes/parsec-3.0) - Benchmark suite for shared-memory computers, heavily used in multicore research.
+- [PolyBench/C](https://sourceforge.net/p/polybench/home/HOME) - Kernel benchmark suite for compilers and performance optimization.
+- [Rodinia](https://rodinia.cs.virginia.edu) - Heterogeneous computing benchmark suite for GPU and heterogeneous architectures.
 - [SPEC CPU2017](https://www.spec.org/cpu2017) - Standard benchmark suite for comprehensive CPU performance evaluation.
 - [SPLASH-3](https://github.com/SakalisC/Splash-3) - Shared-memory parallel programs for cache coherence and multicore studies.
 - [STREAM](https://www.cs.virginia.edu/stream/) - Synthetic benchmark program that measures sustainable memory bandwidth.
@@ -123,13 +124,13 @@ Essential tools categorized for performance analysis, power measurement, design,
 ### Power & Energy
 
 - [CACTI](https://github.com/HewlettPackard/cacti) - DRAM and SRAM cache power and area model.
-- [ntel® PCM](https://github.com/intel/pcm) - Energy measurement tool for Intel processors.
+- [Intel PCM](https://github.com/intel/pcm) - Energy measurement tool for Intel processors.
 - [McPAT](https://github.com/HewlettPackard/mcpat) - Power, area, and timing modeling framework.
 - [Wattch](https://www.seas.upenn.edu/~leebcc/teachdir/ece299_fall10/Brooks00_Wattch.pdf) - Power modeling integrated with cycle-level simulators.
 
 ### Design Language
 
-- [Bluespec SystemVerilog](https://github.com/mchanphilly/vscode-bsv) - High-level language for hardware design.
+- [Bluespec SystemVerilog](https://github.com/B-Lang-org/bsc) - High-level language and compiler for hardware design.
 - [Chisel](https://chisel-lang.org) - Hardware construction language for custom processors.
 
 ### Visualization
@@ -143,7 +144,7 @@ Official specifications and reference manuals for major instruction set architec
 
 - [AMD64 Architecture Programmer's Manual](https://www.amd.com/en/support/tech-docs/amd64-architecture-programmers-manual-volumes-1-5) - AMD's x86-64 ISA reference.
 - [ARM Architecture Reference Manual](https://developer.arm.com/documentation/ddi0487/latest) - Complete ARMv8/v9 ISA reference.
-- [Intel x86 Software Developer Manuals](https://www.intel.com/content/www/en-us/developer/articles/technical/intel-sdm.html) - Full x86-64 ISA and microarchitecture reference.
+- [Intel x86 Software Developer Manuals](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html) - Full x86-64 ISA and microarchitecture reference.
 - [MIPS Architecture](https://www.mips.com/products/architectures/) - Classic MIPS ISA reference, useful for teaching.
 - [RISC-V Spec](https://github.com/riscv/riscv-isa-manual/releases) - Official unprivileged and privileged ISA specifications.
 
@@ -188,7 +189,7 @@ Tools and frameworks actively used in recent top-tier publications (ISCA, MICRO,
 ### AI & Large Language Model (LLM) Hardware
 
 - [ASTRA-sim](https://github.com/astra-sim/astra-sim) - Distributed deep learning training simulator for modeling multi-GPU communication and network endpoints.
-- [Sparseloop](https://github.com/Accelergy-Project/micro22-sparseloop-artifact) - Analytical modeling for sparse tensor accelerators exploring hardware exploitation of un-structured/structured sparsity.
+- [Sparseloop](https://github.com/Accelergy-Project/micro22-sparseloop-artifact) - Analytical modeling for sparse tensor accelerators exploring hardware exploitation of unstructured/structured sparsity.
 - [Timeloop + Accelergy](https://github.com/Accelergy-Project/accelergy-timeloop-infrastructure) - Joint performance and energy modeling for full design-space exploration of AI chips and DNN accelerators.
 
 ### Advanced Packaging & Chiplets (2.5D/3D Integration)
@@ -199,52 +200,52 @@ Tools and frameworks actively used in recent top-tier publications (ISCA, MICRO,
 ### Memory Disaggregation & Processing-in-Memory (PIM)
 
 - [CXL Consortium](https://www.computeexpresslink.org/) - Official CXL specification and resources for understanding CXL memory pooling and coherency protocols.
-- [ZSim+Ramulator](https://github.com/CMU-SAFARI/ramulator-pim) -  Processing-in-Memory Simulation Framework.
+- [ZSim+Ramulator](https://github.com/CMU-SAFARI/ramulator-pim) - Processing-in-Memory simulation framework combining ZSim and Ramulator.
 
 ### Hardware Security & Confidential Computing
 
 - [Revizor](https://github.com/hw-sw-contracts/revizor) - Microarchitectural fuzzing tool for detecting automated hardware information leaks like Spectre variants.
 - [SoftMC](https://github.com/CMU-SAFARI/SoftMC) - FPGA-based DRAM testing framework for discovering and mitigating Rowhammer vulnerabilities in DDR4/DDR5.
 
-## Elite Research Labs in Computer Architecture & Systems
+## Research Labs in Computer Architecture & Systems
 
-Below is a curated list of research groups with sustained, high-impact contributions in top-tier computer architecture and systems venues such as ISCA, MICRO, HPCA, and ASPLOS.
+A curated list of research groups with sustained, high-impact contributions in top-tier computer architecture and systems venues such as ISCA, MICRO, HPCA, and ASPLOS.
 
 ### Notable & Highly Influential Labs
 
-- **[CMU CALCM – Computer Architecture Lab at Carnegie Mellon](https://calcm.ece.cmu.edu/)** - The primary architecture hub at CMU. Historically and currently elite in storage systems, non-volatile memories, accelerators, parallel processing, and HW/SW co-design.
-- **[Georgia Tech MSL – Memory Systems Lab](https://msl.ece.gatech.edu/)** - *Led by Moinuddin Qureshi.* World-class research focusing on cache/memory hierarchies, scalable memory systems, secure architecture, and quantum computing architecture.
-- **[UC Berkeley SLICE Lab](https://slice.eecs.berkeley.edu/)** - *Successor to the ADEPT Lab.* Focuses on open-source silicon ecosystems (RISC-V), agile hardware design methodologies, ML accelerators, and warehouse-scale computing.
-- **[UIUC I-ACOMA Lab](http://iacoma.cs.uiuc.edu/)** - *Led by Josep Torrellas.* Renowned for work on extreme-scale architectures, parallel architectures, memory consistency models, and secure hardware.
+- [CMU CALCM – Computer Architecture Lab at Carnegie Mellon](https://calcm.ece.cmu.edu/) - The primary architecture hub at CMU, historically and currently strong in storage systems, non-volatile memories, accelerators, parallel processing, and HW/SW co-design.
+- [Georgia Tech MSL – Memory Systems Lab](https://msl.ece.gatech.edu/) - Led by Moinuddin Qureshi, with world-class research on cache/memory hierarchies, scalable memory systems, secure architecture, and quantum computing architecture.
+- [UC Berkeley SLICE Lab](https://slice.eecs.berkeley.edu/) - Successor to the ADEPT Lab, focusing on open-source silicon ecosystems (RISC-V), agile hardware design methodologies, ML accelerators, and warehouse-scale computing.
+- [UIUC I-ACOMA Lab](http://iacoma.cs.uiuc.edu/) - Led by Josep Torrellas, renowned for work on extreme-scale architectures, parallel architectures, memory consistency models, and secure hardware.
 
-### Core Elite Labs
+### Core Labs
 
-- **[Cambridge Computer Architecture Group (CAG)](https://www.cst.cam.ac.uk/research/comparch)** - Specializes in manycore and interconnect architectures, memory systems, on-chip networks, and secure, low-power design.
-- **[Cornell Computer Systems Laboratory (CSL)](https://www.csl.cornell.edu/)** - A powerhouse for HW/SW co-design, datacenter networking microarchitecture, secure enclaves, scalable servers, and agile hardware.
-- **[EPFL PARSA / EcoCloud](https://parsa.epfl.ch/)** - Focuses on datacenter and cloud server architectures, rack-scale computing, energy-efficient computing, and hardware for big data.
-- **[ETH Zürich SAFARI Research Group](https://safari.ethz.ch/)** - *Led by Onur Mutlu.* A highly prolific lab pioneering Processing-in-Memory (PIM), DRAM/NVM architectures, Rowhammer/hardware security, and bioinformatics acceleration.
-- **[Georgia Tech Synergy Lab](http://synergy.ece.gatech.edu/)** - *Led by Tushar Krishna.* Leading research in deep learning accelerators, Network-on-Chip (NoC), spatial architectures, and AI performance modeling.
-- **[MIT CSG – Computer Systems Group](http://csg.csail.mit.edu/)** - Highly influential in parallel architectures, spatial accelerators, cache coherence, secure hardware, and programmable ML hardware.
-- **[Princeton Parallel Group](https://parallel.princeton.edu/)** - *Led by David Wentzlaff.* Known for manycore processors, scalable memory systems, datacenter/cloud architectures, and open-source hardware (e.g., OpenPiton).
-- **[Stanford AHA – Agile Hardware Project](https://aha.stanford.edu/)** - Pushing the boundaries of domain-specific accelerators, CGRAs, reconfigurable fabrics, memory systems, and agile hardware design tooling.
-- **[Tsinghua PACMAN Group](http://pacman.cs.tsinghua.edu.cn/)** - Focuses on high-performance processors, accelerators for AI and HPC, memory systems, and heterogeneous systems design.
-- **[UCLA VAST Lab](https://vast.cs.ucla.edu/)** - *Led by Jason Cong.* Pioneers in domain-specific computing, FPGA/heterogeneous acceleration, High-Level Synthesis (HLS), and automated ML hardware design tools.
-- **[University of Michigan – Computer Engineering Lab (CE)](https://ce.engin.umich.edu/)** - Home to multiple top PIs researching secure/trustworthy hardware, in-memory computing, energy-efficient architectures, and robust system design.
-- **[University of Toronto – EECG](https://www.eecg.utoronto.ca/)** - Contains multiple elite sub-groups. Globally recognized for energy-efficient ML systems, GPU microarchitecture, FPGA design, and memory for AI.
-- **[UT Austin LCA – Laboratory for Computer Architecture](https://lca.ece.utexas.edu/)** - Elite research in core CPU microarchitecture, branch prediction, cache/memory hierarchies, GPU memory systems, and hardware reliability.
-- **[University of Washington – Sampa Lab](https://sampa.cs.washington.edu/)** - Cutting-edge work in large-scale systems, approximate computing, DNA data storage, ML systems, and novel hardware substrates.
-- **[UW–Madison Computer Architecture](https://www.cs.wisc.edu/research/computer-architecture/)** - A historically legendary hub for architecture. Focuses on classic and modern CPU microarchitecture, memory consistency models, heterogeneous computing, and tool development (e.g., gem5).
-- **[Harvard Architecture, Circuits, and Compilers Group](https://vlsiarch.eecs.harvard.edu)** - Renowned for pioneering work in power/thermal-efficient architectures, edge AI hardware accelerators, autonomous systems, and HW/SW co-design.
-- **[Universitat Politècnica de Catalunya (UPC) DAC](https://www.ac.upc.edu/en)** - Deeply integrated with the Barcelona Supercomputing Center (BSC), conducting world-leading research in HPC, superscalar microarchitecture, vector processors, and memory systems.
-- 
-### Additional Elite Architecture & Systems Labs
+- [Cambridge Computer Architecture Group (CAG)](https://www.cst.cam.ac.uk/research/comparch) - Specializes in manycore and interconnect architectures, memory systems, on-chip networks, and secure, low-power design.
+- [Cornell Computer Systems Laboratory (CSL)](https://www.csl.cornell.edu/) - A powerhouse for HW/SW co-design, datacenter networking microarchitecture, secure enclaves, scalable servers, and agile hardware.
+- [EPFL PARSA / EcoCloud](https://parsa.epfl.ch/) - Focuses on datacenter and cloud server architectures, rack-scale computing, energy-efficient computing, and hardware for big data.
+- [ETH Zürich SAFARI Research Group](https://safari.ethz.ch/) - Led by Onur Mutlu, a highly prolific lab pioneering Processing-in-Memory (PIM), DRAM/NVM architectures, Rowhammer/hardware security, and bioinformatics acceleration.
+- [Georgia Tech Synergy Lab](http://synergy.ece.gatech.edu/) - Led by Tushar Krishna, leading research in deep learning accelerators, Network-on-Chip (NoC), spatial architectures, and AI performance modeling.
+- [Harvard Architecture, Circuits, and Compilers Group](https://vlsiarch.eecs.harvard.edu) - Renowned for pioneering work in power/thermal-efficient architectures, edge AI hardware accelerators, autonomous systems, and HW/SW co-design.
+- [MIT CSG – Computer Systems Group](http://csg.csail.mit.edu/) - Highly influential in parallel architectures, spatial accelerators, cache coherence, secure hardware, and programmable ML hardware.
+- [Princeton Parallel Group](https://parallel.princeton.edu/) - Led by David Wentzlaff, known for manycore processors, scalable memory systems, datacenter/cloud architectures, and open-source hardware (e.g., OpenPiton).
+- [Stanford AHA – Agile Hardware Project](https://aha.stanford.edu/) - Pushing the boundaries of domain-specific accelerators, CGRAs, reconfigurable fabrics, memory systems, and agile hardware design tooling.
+- [Tsinghua PACMAN Group](http://pacman.cs.tsinghua.edu.cn/) - Focuses on high-performance processors, accelerators for AI and HPC, memory systems, and heterogeneous systems design.
+- [UCLA VAST Lab](https://vast.cs.ucla.edu/) - Led by Jason Cong, pioneers in domain-specific computing, FPGA/heterogeneous acceleration, High-Level Synthesis (HLS), and automated ML hardware design tools.
+- [Universitat Politècnica de Catalunya (UPC) DAC](https://www.ac.upc.edu/en) - Deeply integrated with the Barcelona Supercomputing Center (BSC), conducting world-leading research in HPC, superscalar microarchitecture, vector processors, and memory systems.
+- [University of Michigan – Computer Engineering Lab (CE)](https://ce.engin.umich.edu/) - Home to multiple top PIs researching secure/trustworthy hardware, in-memory computing, energy-efficient architectures, and robust system design.
+- [University of Toronto – EECG](https://www.eecg.utoronto.ca/) - Contains multiple elite sub-groups, globally recognized for energy-efficient ML systems, GPU microarchitecture, FPGA design, and memory for AI.
+- [University of Washington – Sampa Lab](https://sampa.cs.washington.edu/) - Cutting-edge work in large-scale systems, approximate computing, DNA data storage, ML systems, and novel hardware substrates.
+- [UT Austin LCA – Laboratory for Computer Architecture](https://lca.ece.utexas.edu/) - Elite research in core CPU microarchitecture, branch prediction, cache/memory hierarchies, GPU memory systems, and hardware reliability.
+- [UW–Madison Computer Architecture](https://www.cs.wisc.edu/research/computer-architecture/) - A historically legendary hub for architecture, focusing on classic and modern CPU microarchitecture, memory consistency models, heterogeneous computing, and tool development (e.g., gem5).
 
-- **[UC Berkeley BAR – Berkeley Architecture Research Group](https://bar.eecs.berkeley.edu/)** - Deeply influential in the RISC-V movement, vector architectures, out-of-order processor generators (BOOM), and SoC design tools.
-- **[University of Edinburgh – ICSA](https://web.inf.ed.ac.uk/icsa)** - A leading European institute known for high-performance compilers, heterogeneous computing, low-power systems, and advanced microarchitecture.
-- **[University of Manchester – APT Group](https://apt.cs.manchester.ac.uk/)** - Famous for the SpiNNaker project, neuromorphic computing, and massive-scale many-core systems.
-- **[TU Delft – Computer Engineering Lab](https://ce.ewi.tudelft.nl/)** - Leading European research in quantum computing control microarchitecture, memristor-based computing, and edge AI accelerators.
-- **[KAIST – Computer Architecture & Systems](https://cs.kaist.ac.kr/)** *(Navigate to Systems/Arch labs)* - A dominant force in Asia producing highly influential papers in NVM, SSD architectures, AI accelerators, and main memory systems.
-- **[Seoul National University – Computer Architecture & Embedded Systems](https://cse.snu.ac.kr/)** *(Navigate to labs)* - World-class output in deep learning accelerators, GPU architectures, advanced memory structures, and hardware-software co-design.
+### Additional Architecture & Systems Labs
+
+- [KAIST – Computer Architecture & Systems](https://cs.kaist.ac.kr/) - A dominant force in Asia producing highly influential papers in NVM, SSD architectures, AI accelerators, and main memory systems.
+- [Seoul National University – Computer Architecture & Embedded Systems](https://cse.snu.ac.kr/) - World-class output in deep learning accelerators, GPU architectures, advanced memory structures, and hardware-software co-design.
+- [TU Delft – Computer Engineering Lab](https://ce.ewi.tudelft.nl/) - Leading European research in quantum computing control microarchitecture, memristor-based computing, and edge AI accelerators.
+- [UC Berkeley BAR – Berkeley Architecture Research Group](https://bar.eecs.berkeley.edu/) - Deeply influential in the RISC-V movement, vector architectures, out-of-order processor generators (BOOM), and SoC design tools.
+- [University of Edinburgh – ICSA](https://web.inf.ed.ac.uk/icsa) - A leading European institute known for high-performance compilers, heterogeneous computing, low-power systems, and advanced microarchitecture.
+- [University of Manchester – APT Group](https://apt.cs.manchester.ac.uk/) - Famous for the SpiNNaker project, neuromorphic computing, and massive-scale many-core systems.
 
 ## Hall of Fame
 

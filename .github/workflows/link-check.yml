@@ -1,0 +1,54 @@
+name: Link Check
+
+on:
+  # Verify links on every change to the list
+  push:
+    branches: [main]
+    paths: ['readme.md', 'README.md']
+  pull_request:
+    paths: ['readme.md', 'README.md']
+  # Catch link rot: full sweep every Monday at 06:00 UTC
+  schedule:
+    - cron: '0 6 * * 1'
+  # Allow manual runs from the Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check links with lychee
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --config lychee.toml --no-progress './**/*.md'
+          output: ./lychee/out.md
+          fail: false
+        env:
+          # Raises GitHub API rate limits so github.com links aren't false positives
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # On the weekly scheduled run, open (or update) an issue listing broken links
+      - name: Open issue for broken links
+        if: steps.lychee.outputs.exit_code != 0 && github.event_name == 'schedule'
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: 'Broken links detected by weekly link check'
+          content-filepath: ./lychee/out.md
+          labels: |
+            broken-links
+            automated
+
+      # On pushes and PRs, fail the check so broken links never get merged
+      - name: Fail if links are broken
+        if: steps.lychee.outputs.exit_code != 0 && github.event_name != 'schedule'
+        run: |
+          echo "Broken links found. See the lychee report above."
+          exit 1

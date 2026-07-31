@@ -1,0 +1,29 @@
+# Configuration for lychee link checker (https://github.com/lycheeverse/lychee)
+
+# Be polite and resilient
+max_concurrency = 8
+max_retries = 3
+retry_wait_time = 5
+timeout = 30
+
+# Many corporate/academic sites (Intel, ARM, Elsevier, Coursera...) return
+# 403/429 to bots even though the page is fine in a browser. Treat those as OK
+# so the report only contains genuinely dead links (404, 410, DNS failures).
+accept = ["200..=204", "206", "301", "302", "308", "403", "429"]
+
+# Present a browser-like user agent; some CDNs hard-block unknown agents
+user_agent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"
+
+# Check anchors in same-file links (e.g. the Contents section)
+include_fragments = true
+
+# Skip URLs that can never be validated automatically
+exclude = [
+  # YouTube blocks most datacenter IPs; verify these manually
+  "^https://www\\.youtube\\.com",
+  # Requires login/paywall
+  "^https://www\\.coursera\\.org",
+]
+
+# Don't check email addresses
+exclude_mail = true
