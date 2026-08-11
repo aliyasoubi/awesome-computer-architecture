@@ -15,7 +15,7 @@ accept = ["200..=204", "206", "301", "302", "308", "403", "429"]
 user_agent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"
 
 # Check anchors in same-file links (e.g. the Contents section)
-include_fragments = true
+include_fragments = "anchor-only"
 
 # Skip URLs that can never be validated automatically
 exclude = [
@@ -25,5 +25,5 @@ exclude = [
   "^https://www\\.coursera\\.org",
 ]
 
-# Don't check email addresses
-exclude_mail = true
+# Don't check email addresses (mailto: links are opt-in via include_mail)
+include_mail = false
