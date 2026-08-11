@@ -38,7 +38,7 @@
 
 Essential reading materials for computer architecture, ranging from foundational concepts to advanced quantitative analysis.
 
-- [CMOS VLSI Design: A Circuits & Systems Perspective](https://www.pearson.com/en-us/subject-catalog/p/cmos-vlsi-design-a-circuits-and-systems-perspective/P200000009477/9780321547743) - Fundamentals of CMOS technology, circuits, and VLSI chip design by Weste & Harris.
+- [CMOS VLSI Design: A Circuits & Systems Perspective](https://www.pearson.com/en-us/subject-catalog/p/cmos-vlsi-design-a-circuits-and-systems-perspective/P200000003427/9780321547743) - Fundamentals of CMOS technology, circuits, and VLSI chip design by Weste & Harris.
 - [Computer Architecture: A Quantitative Approach](https://shop.elsevier.com/books/computer-architecture/hennessy/978-0-443-15406-5) - The definitive guide for graduate-level architecture by Hennessy & Patterson.
 - [Computer Organization and Design (RISC-V Edition)](https://shop.elsevier.com/books/computer-organization-and-design-risc-v-edition/patterson/978-0-12-820331-6) - Best for undergraduate basics and RISC-V fundamentals by Patterson & Hennessy.
 - [Digital Design and Computer Architecture](https://shop.elsevier.com/books/digital-design-and-computer-architecture/harris/978-0-12-394424-5) - Connecting logic gates to processor design by Harris & Harris.
@@ -103,7 +103,7 @@ Benchmark suites crucial for evaluating computer system performance, selected ba
 - [Graph500](https://graph500.org/) - Graph-based workload benchmark for memory-bound and graph analytics research.
 - [MiBench](https://vhosts.eecs.umich.edu/mibench) - Benchmark suite for evaluating embedded systems performance.
 - [MLPerf](https://mlcommons.org/benchmarks/inference-datacenter/) - Industry-standard ML hardware benchmark suite for AI accelerator and GPU evaluation.
-- [NAS Parallel Benchmarks](https://www.nas.nasa.gov/publications/npb.html) - High-performance computing benchmarks for parallel systems performance.
+- [NAS Parallel Benchmarks](https://www.nas.nasa.gov/software/npb.html) - High-performance computing benchmarks for parallel systems performance.
 - [PARSEC](https://github.com/connorimes/parsec-3.0) - Benchmark suite for shared-memory computers, heavily used in multicore research.
 - [PolyBench/C](https://sourceforge.net/p/polybench/home/HOME) - Kernel benchmark suite for compilers and performance optimization.
 - [Rodinia](https://rodinia.cs.virginia.edu) - Heterogeneous computing benchmark suite for GPU and heterogeneous architectures.
@@ -126,12 +126,12 @@ Essential tools categorized for performance analysis, power measurement, design,
 - [CACTI](https://github.com/HewlettPackard/cacti) - DRAM and SRAM cache power and area model.
 - [Intel PCM](https://github.com/intel/pcm) - Energy measurement tool for Intel processors.
 - [McPAT](https://github.com/HewlettPackard/mcpat) - Power, area, and timing modeling framework.
-- [Wattch](https://www.seas.upenn.edu/~leebcc/teachdir/ece299_fall10/Brooks00_Wattch.pdf) - Power modeling integrated with cycle-level simulators.
+- [Wattch](https://www.engineering.upenn.edu/~leebcc/teachdir/ece299_fall10/Brooks00_Wattch.pdf) - Power modeling integrated with cycle-level simulators.
 
 ### Design Language
 
 - [Bluespec SystemVerilog](https://github.com/B-Lang-org/bsc) - High-level language and compiler for hardware design.
-- [Chisel](https://chisel-lang.org) - Hardware construction language for custom processors.
+- [Chisel](https://www.chisel-lang.org/) - Hardware construction language for custom processors.
 
 ### Visualization
 
@@ -173,7 +173,6 @@ Memory, branch, and instruction traces used as inputs for simulators and predict
 
 Online courses and specific guides for learning computer architecture, catering to both beginners and graduate researchers.
 
-- [David Patterson RISC-V Lectures](https://www.youtube.com/results?search_query=david+patterson+risc-v) - Lectures by the co-inventor of RISC-V on modern ISA design.
 - [gem5 Bootcamp](https://www.youtube.com/@gem5simulator) - Recorded sessions from the official gem5 bootcamp.
 - [gem5 Tutorials](https://www.gem5.org/documentation/learning_gem5/introduction/) - Official tutorials for hands-on learning with the gem5 simulator.
 - [Georgia Tech HPCA](https://www.youtube.com/playlist?list=PLAwxTw4SYaPmqpjgrmf4-DGlaeV0om4iP) - Advanced course on high-performance computer architecture.
@@ -181,6 +180,7 @@ Online courses and specific guides for learning computer architecture, catering 
 - [MIT 6.004 Computation Structures](https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/) - Foundational digital design and architecture course.
 - [Princeton Computer Architecture](https://www.coursera.org/learn/comparch) - Comprehensive architecture course for graduate students.
 - [RISC-V Tutorials](https://github.com/riscv/learn) - Official learning resources for the open standard RISC-V ISA.
+- [UC Berkeley CS61C](https://cs61c.org/) - Great Ideas in Computer Architecture; RISC-V, processor design, caches, pipelining, and parallelism.
 
 ## Cutting-Edge Research & Emerging Architectures
 
@@ -199,7 +199,7 @@ Tools and frameworks actively used in recent top-tier publications (ISCA, MICRO,
 
 ### Memory Disaggregation & Processing-in-Memory (PIM)
 
-- [CXL Consortium](https://www.computeexpresslink.org/) - Official CXL specification and resources for understanding CXL memory pooling and coherency protocols.
+- [CXL Consortium](https://computeexpresslink.org/) - Official CXL specification and resources for understanding CXL memory pooling and coherency protocols.
 - [ZSim+Ramulator](https://github.com/CMU-SAFARI/ramulator-pim) - Processing-in-Memory simulation framework combining ZSim and Ramulator.
 
 ### Hardware Security & Confidential Computing
@@ -216,7 +216,7 @@ A curated list of research groups with sustained, high-impact contributions in t
 - [CMU CALCM – Computer Architecture Lab at Carnegie Mellon](https://research.ece.cmu.edu/calcm/) - The primary architecture hub at CMU, historically and currently strong in storage systems, non-volatile memories, accelerators, parallel processing, and HW/SW co-design.
 - [Georgia Tech FAST – Future Architectures and Systems Lab](https://fast.cc.gatech.edu/) - Led by Moinuddin Qureshi, with world-class research on cache/memory hierarchies, scalable memory systems, secure architecture, and quantum computing architecture.
 - [UC Berkeley SLICE Lab](https://slice.eecs.berkeley.edu/) - Successor to the ADEPT Lab, focusing on open-source silicon ecosystems (RISC-V), agile hardware design methodologies, ML accelerators, and warehouse-scale computing.
-- [UIUC I-ACOMA Lab](http://iacoma.cs.uiuc.edu/) - Led by Josep Torrellas, renowned for work on extreme-scale architectures, parallel architectures, memory consistency models, and secure hardware.
+- [UIUC I-ACOMA Lab](https://iacoma.cs.uiuc.edu/) - Led by Josep Torrellas, renowned for work on extreme-scale architectures, parallel architectures, memory consistency models, and secure hardware.
 
 ### Core Labs
 
@@ -242,10 +242,10 @@ A curated list of research groups with sustained, high-impact contributions in t
 
 - [KAIST – Computer Architecture & Systems](https://cs.kaist.ac.kr/) - A dominant force in Asia producing highly influential papers in NVM, SSD architectures, AI accelerators, and main memory systems.
 - [Seoul National University – Computer Architecture & Embedded Systems](https://cse.snu.ac.kr/) - World-class output in deep learning accelerators, GPU architectures, advanced memory structures, and hardware-software co-design.
-- [TU Delft – Quantum & Computer Engineering](https://qce.ewi.tudelft.nl/) - Leading European research in quantum computing control microarchitecture, memristor-based computing, and edge AI accelerators.
+- [TU Delft – Quantum & Computer Engineering](https://www.tudelft.nl/en/eemcs/the-faculty/departments/quantum-computer-engineering/) - Leading European research in quantum computing control microarchitecture, memristor-based computing, and edge AI accelerators.
 - [UC Berkeley BAR – Berkeley Architecture Research Group](https://bar.eecs.berkeley.edu/) - Deeply influential in the RISC-V movement, vector architectures, out-of-order processor generators (BOOM), and SoC design tools.
 - [University of Edinburgh – ICSA](https://informatics.ed.ac.uk/icsa) - A leading European institute known for high-performance compilers, heterogeneous computing, low-power systems, and advanced microarchitecture.
-- [University of Manchester – APT Group](https://apt.cs.manchester.ac.uk/) - Famous for the SpiNNaker project, neuromorphic computing, and massive-scale many-core systems.
+- [University of Manchester – APT Group](https://www.cs.manchester.ac.uk/research/expertise/advanced-processor-technologies/) - Famous for the SpiNNaker project, neuromorphic computing, and massive-scale many-core systems.
 
 ## Hall of Fame
 
