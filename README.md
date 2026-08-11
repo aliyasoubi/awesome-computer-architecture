@@ -213,8 +213,8 @@ A curated list of research groups with sustained, high-impact contributions in t
 
 ### Notable & Highly Influential Labs
 
-- [CMU CALCM – Computer Architecture Lab at Carnegie Mellon](https://calcm.ece.cmu.edu/) - The primary architecture hub at CMU, historically and currently strong in storage systems, non-volatile memories, accelerators, parallel processing, and HW/SW co-design.
-- [Georgia Tech MSL – Memory Systems Lab](https://msl.ece.gatech.edu/) - Led by Moinuddin Qureshi, with world-class research on cache/memory hierarchies, scalable memory systems, secure architecture, and quantum computing architecture.
+- [CMU CALCM – Computer Architecture Lab at Carnegie Mellon](https://research.ece.cmu.edu/calcm/) - The primary architecture hub at CMU, historically and currently strong in storage systems, non-volatile memories, accelerators, parallel processing, and HW/SW co-design.
+- [Georgia Tech FAST – Future Architectures and Systems Lab](https://fast.cc.gatech.edu/) - Led by Moinuddin Qureshi, with world-class research on cache/memory hierarchies, scalable memory systems, secure architecture, and quantum computing architecture.
 - [UC Berkeley SLICE Lab](https://slice.eecs.berkeley.edu/) - Successor to the ADEPT Lab, focusing on open-source silicon ecosystems (RISC-V), agile hardware design methodologies, ML accelerators, and warehouse-scale computing.
 - [UIUC I-ACOMA Lab](http://iacoma.cs.uiuc.edu/) - Led by Josep Torrellas, renowned for work on extreme-scale architectures, parallel architectures, memory consistency models, and secure hardware.
 
@@ -224,12 +224,12 @@ A curated list of research groups with sustained, high-impact contributions in t
 - [Cornell Computer Systems Laboratory (CSL)](https://www.csl.cornell.edu/) - A powerhouse for HW/SW co-design, datacenter networking microarchitecture, secure enclaves, scalable servers, and agile hardware.
 - [EPFL PARSA / EcoCloud](https://parsa.epfl.ch/) - Focuses on datacenter and cloud server architectures, rack-scale computing, energy-efficient computing, and hardware for big data.
 - [ETH Zürich SAFARI Research Group](https://safari.ethz.ch/) - Led by Onur Mutlu, a highly prolific lab pioneering Processing-in-Memory (PIM), DRAM/NVM architectures, Rowhammer/hardware security, and bioinformatics acceleration.
-- [Georgia Tech Synergy Lab](http://synergy.ece.gatech.edu/) - Led by Tushar Krishna, leading research in deep learning accelerators, Network-on-Chip (NoC), spatial architectures, and AI performance modeling.
+- [Georgia Tech Synergy Lab](https://synergy.ece.gatech.edu/) - Led by Tushar Krishna, leading research in deep learning accelerators, Network-on-Chip (NoC), spatial architectures, and AI performance modeling.
 - [Harvard Architecture, Circuits, and Compilers Group](https://vlsiarch.eecs.harvard.edu) - Renowned for pioneering work in power/thermal-efficient architectures, edge AI hardware accelerators, autonomous systems, and HW/SW co-design.
-- [MIT CSG – Computer Systems Group](http://csg.csail.mit.edu/) - Highly influential in parallel architectures, spatial accelerators, cache coherence, secure hardware, and programmable ML hardware.
+- [MIT CSG – Computer Systems Group](https://csg.csail.mit.edu/) - Highly influential in parallel architectures, spatial accelerators, cache coherence, secure hardware, and programmable ML hardware.
 - [Princeton Parallel Group](https://parallel.princeton.edu/) - Led by David Wentzlaff, known for manycore processors, scalable memory systems, datacenter/cloud architectures, and open-source hardware (e.g., OpenPiton).
 - [Stanford AHA – Agile Hardware Project](https://aha.stanford.edu/) - Pushing the boundaries of domain-specific accelerators, CGRAs, reconfigurable fabrics, memory systems, and agile hardware design tooling.
-- [Tsinghua PACMAN Group](http://pacman.cs.tsinghua.edu.cn/) - Focuses on high-performance processors, accelerators for AI and HPC, memory systems, and heterogeneous systems design.
+- [Tsinghua PACMAN Group](https://pacman.cs.tsinghua.edu.cn/) - Focuses on high-performance processors, accelerators for AI and HPC, memory systems, and heterogeneous systems design.
 - [UCLA VAST Lab](https://vast.cs.ucla.edu/) - Led by Jason Cong, pioneers in domain-specific computing, FPGA/heterogeneous acceleration, High-Level Synthesis (HLS), and automated ML hardware design tools.
 - [Universitat Politècnica de Catalunya (UPC) DAC](https://www.ac.upc.edu/en) - Deeply integrated with the Barcelona Supercomputing Center (BSC), conducting world-leading research in HPC, superscalar microarchitecture, vector processors, and memory systems.
 - [University of Michigan – Computer Engineering Lab (CE)](https://ce.engin.umich.edu/) - Home to multiple top PIs researching secure/trustworthy hardware, in-memory computing, energy-efficient architectures, and robust system design.
@@ -242,9 +242,9 @@ A curated list of research groups with sustained, high-impact contributions in t
 
 - [KAIST – Computer Architecture & Systems](https://cs.kaist.ac.kr/) - A dominant force in Asia producing highly influential papers in NVM, SSD architectures, AI accelerators, and main memory systems.
 - [Seoul National University – Computer Architecture & Embedded Systems](https://cse.snu.ac.kr/) - World-class output in deep learning accelerators, GPU architectures, advanced memory structures, and hardware-software co-design.
-- [TU Delft – Computer Engineering Lab](https://ce.ewi.tudelft.nl/) - Leading European research in quantum computing control microarchitecture, memristor-based computing, and edge AI accelerators.
+- [TU Delft – Quantum & Computer Engineering](https://qce.ewi.tudelft.nl/) - Leading European research in quantum computing control microarchitecture, memristor-based computing, and edge AI accelerators.
 - [UC Berkeley BAR – Berkeley Architecture Research Group](https://bar.eecs.berkeley.edu/) - Deeply influential in the RISC-V movement, vector architectures, out-of-order processor generators (BOOM), and SoC design tools.
-- [University of Edinburgh – ICSA](https://web.inf.ed.ac.uk/icsa) - A leading European institute known for high-performance compilers, heterogeneous computing, low-power systems, and advanced microarchitecture.
+- [University of Edinburgh – ICSA](https://informatics.ed.ac.uk/icsa) - A leading European institute known for high-performance compilers, heterogeneous computing, low-power systems, and advanced microarchitecture.
 - [University of Manchester – APT Group](https://apt.cs.manchester.ac.uk/) - Famous for the SpiNNaker project, neuromorphic computing, and massive-scale many-core systems.
 
 ## Hall of Fame
