@@ -26,6 +26,10 @@ exclude = [
   # Cloudflare serves a bot challenge to datacenter IPs, so CI always times
   # out here even though the site is fine in a browser. Verify manually.
   "^https://(www\\.)?hpca-conf\\.org",
+  # The host serves its leaf certificate without the InCommon intermediate.
+  # Browsers repair the chain by fetching it (AIA); Linux CI runners do not,
+  # so this fails only in CI. Server-side issue at UMich. Verify manually.
+  "^https://vhosts\\.eecs\\.umich\\.edu",
 ]
 
 # Don't check email addresses (mailto: links are opt-in via include_mail)
