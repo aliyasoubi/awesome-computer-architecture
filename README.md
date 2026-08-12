@@ -62,6 +62,7 @@ The top-tier (Tier-1) academic conferences where the latest computer architectur
 - [gem5](https://www.gem5.org/) - Modular, open-source CPU/SoC simulator used for studying cache, branch prediction, and out-of-order CPUs.
 - [MARSSx86](https://github.com/donggyukim/Marssx86) - Cycle-accurate x86 simulator for x86 microarchitecture analysis.
 - [QEMU](https://www.qemu.org/) - Fast full-system emulator heavily used for OS and software prototyping.
+- [Scarab](https://github.com/hpsresearchgroup/scarab) - Cycle-accurate microarchitecture simulator from HPS and ETH, with trace-driven and execution-driven modes.
 - [Sniper](https://snipersim.org/) - Interval-based multicore simulator for large-scale CMP performance studies.
 - [SST](https://sst-simulator.org/) - Parallel simulator for large-scale systems focusing on HPC/SoC co-design.
 - [ZSim](https://github.com/s5z/zsim) - Fast, scalable x86-64 multicore simulator for cache hierarchy and NUCA research.
@@ -78,8 +79,8 @@ The top-tier (Tier-1) academic conferences where the latest computer architectur
 
 - [DRAMSim3](https://github.com/umd-memsys/DRAMsim3) - Cycle-accurate DRAM simulator for DDRx and LPDDRx modeling.
 - [MQSim](https://github.com/CMU-SAFARI/MQSim) - NVMe and SSD simulator for computational storage and near-data processing.
-- [Ramulator](https://github.com/CMU-SAFARI/ramulator) - Supports HBM, GDDR, and emerging memories for memory controller design.
-- [Ramulator 2](https://github.com/CMU-SAFARI/ramulator2) - Redesigned Ramulator with a cleaner, modular API for next-generation memory protocol research.
+- [Ramulator](https://github.com/CMU-SAFARI/ramulator) - Original DRAM simulator covering DDR3/4, GDDR5, and HBM; superseded by Ramulator 2, kept for reproducing older studies.
+- [Ramulator 2](https://github.com/CMU-SAFARI/ramulator2) - Recommended DRAM simulator; modular and cycle-accurate, supporting DDR5, LPDDR5, HBM3, and RowHammer mitigation research.
 
 ### Full-System/Cloud Simulators
 
@@ -166,14 +167,12 @@ Memory, branch, and instruction traces used as inputs for simulators and predict
 - [CRC2 Traces](https://crc2.ece.tamu.edu/) - Traces from the Cache Replacement Championship for replacement policy research.
 - [CVP-1 Traces](https://www.microarch.org/cvp1/) - Branch predictor traces from the Championship Value Prediction.
 - [DPC-3 Traces](https://dpc3.compas.cs.stonybrook.edu/) - Traces from the Data Prefetching Championship for prefetcher design and evaluation.
-- [MLPerf Inference Traces](https://mlcommons.org/) - Inference workload traces for AI accelerator research and LLM hardware evaluation.
-- [SPEC CPU Traces](https://github.com/hpsresearchgroup/scarab) - Instruction and memory traces derived from SPEC workloads for simulator input.
 
 ## Tutorials
 
 Online courses and specific guides for learning computer architecture, catering to both beginners and graduate researchers.
 
-- [gem5 Bootcamp](https://www.youtube.com/@gem5simulator) - Recorded sessions from the official gem5 bootcamp.
+- [gem5 Bootcamp](https://bootcamp.gem5.org/) - Official multi-day gem5 course with structured modules, slides, and exercises.
 - [gem5 Tutorials](https://www.gem5.org/documentation/learning_gem5/introduction/) - Official tutorials for hands-on learning with the gem5 simulator.
 - [Georgia Tech HPCA](https://www.youtube.com/playlist?list=PLAwxTw4SYaPmqpjgrmf4-DGlaeV0om4iP) - Advanced course on high-performance computer architecture.
 - [GPU Architecture Tutorial](https://medium.com/codex/understanding-the-architecture-of-a-gpu-d5d2d2e8978b) - Detailed explanation of GPU architecture internals.
@@ -241,7 +240,7 @@ A curated list of research groups with sustained, high-impact contributions in t
 ### Additional Architecture & Systems Labs
 
 - [KAIST – Computer Architecture & Systems](https://cs.kaist.ac.kr/) - A dominant force in Asia producing highly influential papers in NVM, SSD architectures, AI accelerators, and main memory systems.
-- [Seoul National University – Computer Architecture & Embedded Systems](https://cse.snu.ac.kr/) - World-class output in deep learning accelerators, GPU architectures, advanced memory structures, and hardware-software co-design.
+- [Seoul National University – HPCS Lab](https://hpcs.snu.ac.kr/) - High Performance Computer System Lab, working on deep learning accelerators, GPU architectures, advanced memory structures, and hardware-software co-design.
 - [TU Delft – Quantum & Computer Engineering](https://www.tudelft.nl/en/eemcs/the-faculty/departments/quantum-computer-engineering/) - Leading European research in quantum computing control microarchitecture, memristor-based computing, and edge AI accelerators.
 - [UC Berkeley BAR – Berkeley Architecture Research Group](https://bar.eecs.berkeley.edu/) - Deeply influential in the RISC-V movement, vector architectures, out-of-order processor generators (BOOM), and SoC design tools.
 - [University of Edinburgh – ICSA](https://informatics.ed.ac.uk/icsa) - A leading European institute known for high-performance compilers, heterogeneous computing, low-power systems, and advanced microarchitecture.
