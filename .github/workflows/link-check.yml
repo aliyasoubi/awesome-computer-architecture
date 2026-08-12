@@ -58,16 +58,26 @@ jobs:
             broken-links
             automated
 
-      # Fail the job on any non-zero exit, but say which kind of failure it was.
+      # Fail the job on any non-zero exit, but say which kind of failure it was
+      # and print the offending URLs straight into the log, so diagnosing a
+      # failure never requires opening the job summary.
       # lychee: 1 = runtime/input error, 2 = broken links, 3 = bad config file.
       - name: Evaluate lychee result
         if: steps.lychee.outputs.exit_code != 0
         env:
           LYCHEE_EXIT_CODE: ${{ steps.lychee.outputs.exit_code }}
         run: |
+          if [ -f ./lychee/out.md ]; then
+            echo "----- lychee report -----"
+            cat ./lychee/out.md
+            echo "----- end report -----"
+          else
+            echo "No report file was produced at ./lychee/out.md"
+          fi
+
           case "$LYCHEE_EXIT_CODE" in
             1) echo "::error::lychee runtime or input error (not a broken link)." ;;
-            2) echo "::error::Broken links detected. See the job summary." ;;
+            2) echo "::error::Broken links detected. The failing URLs are listed above." ;;
             3) echo "::error::Invalid lychee.toml -- no links were checked." ;;
             *) echo "::error::Unexpected lychee exit code: $LYCHEE_EXIT_CODE" ;;
           esac

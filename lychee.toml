@@ -23,6 +23,9 @@ exclude = [
   "^https://www\\.youtube\\.com",
   # Requires login/paywall
   "^https://www\\.coursera\\.org",
+  # Cloudflare serves a bot challenge to datacenter IPs, so CI always times
+  # out here even though the site is fine in a browser. Verify manually.
+  "^https://(www\\.)?hpca-conf\\.org",
 ]
 
 # Don't check email addresses (mailto: links are opt-in via include_mail)
