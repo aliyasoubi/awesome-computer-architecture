@@ -235,7 +235,7 @@ A curated list of research groups with sustained, high-impact contributions in t
 - [University of Toronto – EECG](https://www.eecg.utoronto.ca/) - Contains multiple elite sub-groups, globally recognized for energy-efficient ML systems, GPU microarchitecture, FPGA design, and memory for AI.
 - [University of Washington – Sampa Lab](https://sampa.cs.washington.edu/) - Cutting-edge work in large-scale systems, approximate computing, DNA data storage, ML systems, and novel hardware substrates.
 - [UT Austin LCA – Laboratory for Computer Architecture](https://lca.ece.utexas.edu/) - Elite research in core CPU microarchitecture, branch prediction, cache/memory hierarchies, GPU memory systems, and hardware reliability.
-- [UW–Madison Computer Architecture](https://www.cs.wisc.edu/research/computer-architecture/) - A historically legendary hub for architecture, focusing on classic and modern CPU microarchitecture, memory consistency models, heterogeneous computing, and tool development (e.g., gem5).
+- [UW–Madison Computer Architecture](https://engineering.wisc.edu/departments/electrical-computer-engineering/research/computer-systems-and-architecture/) - A historically legendary hub for architecture, focusing on classic and modern CPU microarchitecture, memory consistency models, heterogeneous computing, and tool development (e.g., gem5).
 
 ### Additional Architecture & Systems Labs
 
