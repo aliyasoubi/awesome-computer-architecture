@@ -20,6 +20,7 @@
   - [Design Language](#design-language)
   - [Visualization](#visualization)
 - [ISA References & Specs](#isa-references--specs)
+- [Open-Source Processors & SoCs](#open-source-processors--socs)
 - [Compilers & Binary Analysis](#compilers--binary-analysis)
 - [Traces & Datasets](#traces--datasets)
 - [Tutorials](#tutorials)
@@ -71,14 +72,14 @@ The top-tier (Tier-1) academic conferences where the latest computer architectur
 
 - [Accel-Sim](https://github.com/accel-sim/accel-sim-framework) - Validated GPU simulator for modern workloads like tensor cores and deep learning workloads.
 - [GPGPU-Sim](https://github.com/gpgpu-sim/gpgpu-sim_distribution) - Cycle-accurate NVIDIA GPU simulator for CUDA kernel analysis.
-- [SCALE-Sim](https://github.com/ARM-software/SCALE-Sim) - Systolic array simulator for deep neural networks and TPU-like architectures.
+- [SCALE-Sim](https://github.com/scalesim-project/SCALE-Sim) - Systolic array simulator for deep neural networks and TPU-like architectures.
 - [STONNE](https://stonne-simulator.github.io) - Cycle-level microarchitectural simulator for flexible DNN inference accelerators.
 - [Timeloop](https://github.com/NVlabs/timeloop) - Deep learning accelerator modeling framework for energy and performance optimization.
 
 ### Memory System Simulators
 
 - [DRAMSim3](https://github.com/umd-memsys/DRAMsim3) - Cycle-accurate DRAM simulator for DDRx and LPDDRx modeling.
-- [MQSim](https://github.com/CMU-SAFARI/MQSim) - NVMe and SSD simulator for computational storage and near-data processing.
+- [MQSim](https://github.com/CMU-SAFARI/MQSim) - Simulator for modern multi-queue NVMe and SATA SSDs, modelling request queues, steady-state behaviour, and end-to-end I/O latency.
 - [Ramulator](https://github.com/CMU-SAFARI/ramulator) - Original DRAM simulator covering DDR3/4, GDDR5, and HBM; superseded by Ramulator 2, kept for reproducing older studies.
 - [Ramulator 2](https://github.com/CMU-SAFARI/ramulator2) - Recommended DRAM simulator; modular and cycle-accurate, supporting DDR5, LPDDR5, HBM3, and RowHammer mitigation research.
 
@@ -103,7 +104,7 @@ Benchmark suites crucial for evaluating computer system performance, selected ba
 
 - [Graph500](https://graph500.org/) - Graph-based workload benchmark for memory-bound and graph analytics research.
 - [MiBench](https://vhosts.eecs.umich.edu/mibench) - Benchmark suite for evaluating embedded systems performance.
-- [MLPerf](https://mlcommons.org/benchmarks/inference-datacenter/) - Industry-standard ML hardware benchmark suite for AI accelerator and GPU evaluation.
+- [MLPerf Inference: Datacenter](https://mlcommons.org/benchmarks/inference-datacenter/) - Industry-standard datacenter inference benchmark for AI accelerator and GPU evaluation.
 - [NAS Parallel Benchmarks](https://www.nas.nasa.gov/software/npb.html) - High-performance computing benchmarks for parallel systems performance.
 - [PARSEC](https://github.com/connorimes/parsec-3.0) - Benchmark suite for shared-memory computers, heavily used in multicore research.
 - [PolyBench/C](https://sourceforge.net/p/polybench/home/HOME) - Kernel benchmark suite for compilers and performance optimization.
@@ -143,11 +144,26 @@ Essential tools categorized for performance analysis, power measurement, design,
 
 Official specifications and reference manuals for major instruction set architectures.
 
-- [AMD64 Architecture Programmer's Manual](https://www.amd.com/en/support/tech-docs/amd64-architecture-programmers-manual-volumes-1-5) - AMD's x86-64 ISA reference.
 - [ARM Architecture Reference Manual](https://developer.arm.com/documentation/ddi0487/latest) - Complete ARMv8/v9 ISA reference.
 - [Intel x86 Software Developer Manuals](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html) - Full x86-64 ISA and microarchitecture reference.
-- [MIPS Architecture](https://www.mips.com/products/architectures/) - Classic MIPS ISA reference, useful for teaching.
+- [MIPS32 Architecture For Programmers](https://www.ece.lsu.edu/ee4720/mips32v2.pdf) - Official MIPS32 instruction set manual (Volume II), the classic teaching ISA; university mirror, as MIPS no longer hosts the specification.
 - [RISC-V Spec](https://github.com/riscv/riscv-isa-manual/releases) - Official unprivileged and privileged ISA specifications.
+
+## Open-Source Processors & SoCs
+
+Synthesizable RTL implementations used as baselines for architecture research, FPGA prototyping, and tapeouts.
+
+- [BlackParrot](https://github.com/black-parrot/black-parrot) - Linux-capable, cache-coherent RV64GC multicore designed as an accelerator host.
+- [BOOM](https://github.com/riscv-boom/riscv-boom) - Berkeley Out-of-Order Machine; a synthesizable, parameterizable RV64GC superscalar core written in Chisel.
+- [Chipyard](https://github.com/ucb-bar/chipyard) - Framework for designing and evaluating full RISC-V SoCs, integrating Rocket Chip, BOOM, and accelerators.
+- [CVA6](https://github.com/openhwfoundation/cva6) - Six-stage, single-issue, in-order RV64GC application-class core, formerly known as Ariane.
+- [Ibex](https://github.com/lowRISC/ibex) - Small, production-quality 32-bit RISC-V core for embedded control applications.
+- [Microwatt](https://github.com/antonblanchard/microwatt) - Open POWER ISA soft core written in VHDL and targeted at FPGAs.
+- [OpenPiton](https://github.com/PrincetonUniversity/openpiton) - Manycore research framework with directory-based cache coherence across on-chip networks.
+- [PicoRV32](https://github.com/YosysHQ/picorv32) - Size-optimized RV32 core for use as an auxiliary processor in FPGA designs; archived upstream but still widely used.
+- [Rocket Chip](https://github.com/chipsalliance/rocket-chip) - SoC generator producing RISC-V cores and caches, and the basis for many research prototypes.
+- [VexRiscv](https://github.com/SpinalHDL/VexRiscv) - FPGA-friendly RV32 core written in SpinalHDL with a plugin-based pipeline.
+- [XiangShan](https://github.com/OpenXiangShan/XiangShan) - High-performance open-source RV64GC out-of-order superscalar processor.
 
 ## Compilers & Binary Analysis
 
@@ -165,7 +181,7 @@ Tools for compiler research, binary instrumentation, and code generation.
 Memory, branch, and instruction traces used as inputs for simulators and predictor research.
 
 - [CRC2 Traces](https://crc2.ece.tamu.edu/) - Traces from the Cache Replacement Championship for replacement policy research.
-- [CVP-1 Traces](https://www.microarch.org/cvp1/) - Branch predictor traces from the Championship Value Prediction.
+- [CVP-1](https://www.microarch.org/cvp1/) - Championship Value Prediction framework and historical value-prediction traces; the official trace and trace-reader downloads are currently being rehosted.
 - [DPC-3 Traces](https://dpc3.compas.cs.stonybrook.edu/) - Traces from the Data Prefetching Championship for prefetcher design and evaluation.
 
 ## Tutorials
@@ -203,8 +219,8 @@ Tools and frameworks actively used in recent top-tier publications (ISCA, MICRO,
 
 ### Hardware Security & Confidential Computing
 
+- [DRAM Bender](https://github.com/CMU-SAFARI/DRAM-Bender) - FPGA-based DRAM testing infrastructure for DDR4 modules and HBM2 chips, used for Rowhammer and reliability studies; supersedes SoftMC.
 - [Revizor](https://github.com/hw-sw-contracts/revizor) - Microarchitectural fuzzing tool for detecting automated hardware information leaks like Spectre variants.
-- [SoftMC](https://github.com/CMU-SAFARI/SoftMC) - FPGA-based DRAM testing framework for discovering and mitigating Rowhammer vulnerabilities in DDR4/DDR5.
 
 ## Research Labs in Computer Architecture & Systems
 
@@ -225,7 +241,7 @@ A curated list of research groups with sustained, high-impact contributions in t
 - [ETH Zürich SAFARI Research Group](https://safari.ethz.ch/) - Led by Onur Mutlu, a highly prolific lab pioneering Processing-in-Memory (PIM), DRAM/NVM architectures, Rowhammer/hardware security, and bioinformatics acceleration.
 - [Georgia Tech Synergy Lab](https://synergy.ece.gatech.edu/) - Led by Tushar Krishna, leading research in deep learning accelerators, Network-on-Chip (NoC), spatial architectures, and AI performance modeling.
 - [Harvard Architecture, Circuits, and Compilers Group](https://vlsiarch.eecs.harvard.edu) - Renowned for pioneering work in power/thermal-efficient architectures, edge AI hardware accelerators, autonomous systems, and HW/SW co-design.
-- [MIT CSG – Computer Systems Group](https://csg.csail.mit.edu/) - Highly influential in parallel architectures, spatial accelerators, cache coherence, secure hardware, and programmable ML hardware.
+- [MIT CSG – Computation Structures Group](https://csg.csail.mit.edu/) - Highly influential in parallel architectures, spatial accelerators, cache coherence, secure hardware, and programmable ML hardware.
 - [Princeton Parallel Group](https://parallel.princeton.edu/) - Led by David Wentzlaff, known for manycore processors, scalable memory systems, datacenter/cloud architectures, and open-source hardware (e.g., OpenPiton).
 - [Stanford AHA – Agile Hardware Project](https://aha.stanford.edu/) - Pushing the boundaries of domain-specific accelerators, CGRAs, reconfigurable fabrics, memory systems, and agile hardware design tooling.
 - [Tsinghua PACMAN Group](https://pacman.cs.tsinghua.edu.cn/) - Focuses on high-performance processors, accelerators for AI and HPC, memory systems, and heterogeneous systems design.
@@ -239,7 +255,7 @@ A curated list of research groups with sustained, high-impact contributions in t
 
 ### Additional Architecture & Systems Labs
 
-- [KAIST – Computer Architecture & Systems](https://cs.kaist.ac.kr/) - A dominant force in Asia producing highly influential papers in NVM, SSD architectures, AI accelerators, and main memory systems.
+- [KAIST – School of Computing](https://cs.kaist.ac.kr/) - School-level directory for several architecture groups publishing on NVM, SSD architectures, AI accelerators, and main memory systems.
 - [Seoul National University – HPCS Lab](https://hpcs.snu.ac.kr/) - High Performance Computer System Lab, working on deep learning accelerators, GPU architectures, advanced memory structures, and hardware-software co-design.
 - [TU Delft – Quantum & Computer Engineering](https://www.tudelft.nl/en/eemcs/the-faculty/departments/quantum-computer-engineering/) - Leading European research in quantum computing control microarchitecture, memristor-based computing, and edge AI accelerators.
 - [UC Berkeley BAR – Berkeley Architecture Research Group](https://bar.eecs.berkeley.edu/) - Deeply influential in the RISC-V movement, vector architectures, out-of-order processor generators (BOOM), and SoC design tools.
