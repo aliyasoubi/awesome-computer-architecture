@@ -40,7 +40,7 @@
 Essential reading materials for computer architecture, ranging from foundational concepts to advanced quantitative analysis.
 
 - [CMOS VLSI Design: A Circuits & Systems Perspective](https://www.pearson.com/en-us/subject-catalog/p/cmos-vlsi-design-a-circuits-and-systems-perspective/P200000003427/9780321547743) - Fundamentals of CMOS technology, circuits, and VLSI chip design by Weste & Harris.
-- [Computer Architecture: A Quantitative Approach](https://shop.elsevier.com/books/computer-architecture/hennessy/978-0-443-15406-5) - The definitive guide for graduate-level architecture by Hennessy & Patterson.
+- [Computer Architecture: A Quantitative Approach](https://shop.elsevier.com/books/computer-architecture/hennessy/978-0-443-15406-5) - The definitive guide for graduate-level architecture by Hennessy, Patterson & Kozyrakis; seventh edition.
 - [Computer Organization and Design (RISC-V Edition)](https://shop.elsevier.com/books/computer-organization-and-design-risc-v-edition/patterson/978-0-12-820331-6) - Best for undergraduate basics and RISC-V fundamentals by Patterson & Hennessy.
 - [Digital Design and Computer Architecture](https://shop.elsevier.com/books/digital-design-and-computer-architecture/harris/978-0-12-394424-5) - Connecting logic gates to processor design by Harris & Harris.
 - [Parallel Computer Architecture: A Hardware/Software Approach](https://shop.elsevier.com/books/parallel-computer-architecture/culler/978-1-55860-343-1) - The classic text on parallel computing and high-performance architecture by Culler, Singh, & Gupta.
@@ -181,7 +181,7 @@ Tools for compiler research, binary instrumentation, and code generation.
 Memory, branch, and instruction traces used as inputs for simulators and predictor research.
 
 - [CRC2 Traces](https://crc2.ece.tamu.edu/) - Traces from the Cache Replacement Championship for replacement policy research.
-- [CVP-1](https://www.microarch.org/cvp1/) - Championship Value Prediction framework and historical value-prediction traces; the official trace and trace-reader downloads are currently being rehosted.
+- [CVP-1](https://www.microarch.org/cvp1/) - Championship Value Prediction framework and historical value-prediction traces; the official page marks the trace and trace-reader downloads unavailable pending rehosting.
 - [DPC-3 Traces](https://dpc3.compas.cs.stonybrook.edu/) - Traces from the Data Prefetching Championship for prefetcher design and evaluation.
 
 ## Tutorials

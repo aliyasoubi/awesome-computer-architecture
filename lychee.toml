@@ -17,19 +17,24 @@ user_agent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Ge
 # Check anchors in same-file links (e.g. the Contents section)
 include_fragments = "anchor-only"
 
-# Skip URLs that can never be validated automatically
+# Skip URLs that can never be validated automatically.
+#
+# Each pattern is pinned to the one resource it exempts, not to the whole host,
+# so a newly added link on the same site is still checked. A green run therefore
+# means "every link except these four was verified" -- the link-check workflow
+# prints this list in its job summary on every run.
 exclude = [
-  # YouTube blocks most datacenter IPs; verify these manually
-  "^https://www\\.youtube\\.com",
-  # Requires login/paywall
-  "^https://www\\.coursera\\.org",
+  # YouTube blocks most datacenter IPs; verify manually.
+  "^https://www\\.youtube\\.com/playlist\\?list=PLAwxTw4SYaPmqpjgrmf4-DGlaeV0om4iP$",
+  # Requires login; course materials are behind a paywall.
+  "^https://www\\.coursera\\.org/learn/comparch$",
   # Cloudflare serves a bot challenge to datacenter IPs, so CI always times
   # out here even though the site is fine in a browser. Verify manually.
-  "^https://(www\\.)?hpca-conf\\.org",
+  "^https://(www\\.)?hpca-conf\\.org/?$",
   # The host serves its leaf certificate without the InCommon intermediate.
   # Browsers repair the chain by fetching it (AIA); Linux CI runners do not,
   # so this fails only in CI. Server-side issue at UMich. Verify manually.
-  "^https://vhosts\\.eecs\\.umich\\.edu",
+  "^https://vhosts\\.eecs\\.umich\\.edu/mibench/?$",
 ]
 
 # Don't check email addresses (mailto: links are opt-in via include_mail)

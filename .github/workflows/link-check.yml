@@ -45,6 +45,26 @@ jobs:
           # Raises GitHub API rate limits so github.com links aren't false positives
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      # A green run does not mean every resource was validated: four links are
+      # excluded because they cannot be checked from a CI runner. Say so on
+      # every run so the exemptions stay visible rather than silent.
+      - name: Report link-check exemptions
+        if: always()
+        run: |
+          # Runs even when an earlier step failed, so the config may not be
+          # checked out yet; stay quiet rather than masking the real error.
+          [ -f lychee.toml ] || exit 0
+          {
+            echo "### Links not covered by this run"
+            echo
+            echo "These are excluded in \`lychee.toml\` and need manual checks:"
+            echo
+            sed -n '/^exclude = \[/,/^\]/p' lychee.toml \
+              | grep -E '^[[:space:]]*"' \
+              | sed -E 's/^[[:space:]]*"//; s/",?$//' \
+              | sed -e 's/^/- `/' -e 's/$/`/'
+          } >> "$GITHUB_STEP_SUMMARY"
+
       # On the weekly scheduled run, open (or update) an issue listing broken links.
       # Only for exit code 2 (genuine link failures) -- a config error must never
       # masquerade as link rot.
